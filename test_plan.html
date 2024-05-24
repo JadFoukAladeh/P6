@@ -24,20 +24,30 @@
     <!-- This will be the contents of the table of contents (shown in browser as an ordered list) !-->
     <ol> <!-- Recall <ol> means ordered list, which means it'll count from 1 onwards-->
   
-      <li> <a href="#week1">  Purpose</a></li>
-      <li> <a href="#week2">  Environmental Setup</a></li>
-      <li> <a href="#week3">  Week 3</a></li>
-      <li> <a href="#week4">  Week 4</a></li>
-      <li> <a href="#week5">  Week 5</a></li>
-      <li> <a href="#week6">  Week 6</a></li>
-      <li> <a href="#week7">  Week 7</a></li>
-      <li> <a href="#week8">  Week 8</a></li>
-      <li> <a href="#week9">  Week 9</a></li>
-      <li> <a href="#week10"> Week 10</a></li>   
-      <li> <a href="#week11"> Week 11</a></li>
-      <li> <a href="#week12"> Week 12</a></li>
-      <li> <a href="#week13"> Week 13</a></li>
-      <li> <a href="#week14"> Week 14</a></li>
+      <li> <a href="#week1">     Purpose</a></li>
+
+      <li> <a href="#week2">     Environmental Setup</a></li>
+      <ul> 
+        <li> <a href="#week21">  Software Download & Installation</a></li>
+        <li> <a href="#week22">  Initial Virtual Machine Setup</a></li>
+        <li> <a href="#week23">  Initial Server Setup</a></li>
+        <li> <a href="#week24">  Cloning Github Code</a></li>
+      </ul>
+
+      <li> <a href="#week3">     Raspberry PI (RPi) Server Launching</a></li>
+      <ul> 
+        <li> <a href="#week31">  Using Conestoga College WiFI Setup</a></li>
+        <li> <a href="#week32">  Using Home/other WiFI Setup</a></li>
+      </ul>
+
+      <li> <a href="#week4">     CAN Bus Testing</a></li>
+      <ul>
+        <li>  <a href="#week41">  Testing Prof. Michael Galle's code - on given platform of 2 nucleo boards connected as 2 nodes</a></li><!-- Recall the <id> tag will move the user to a particular point on the page -->
+        <li>  <a href="#week42">  Testing group code - on given platform of 2 nucleo boards connected as 2 nodes</a></li><!-- Recall the <id> tag will move the user to a particular point on the page -->
+      </ul>
+
+      <li> <a href="#week5">  Communications Between RPI, Arduino, and STM32F303RE</a></li>
+      <li> <a href="#week6">  Final Testing</a></li>
       
     </ol>
   
@@ -57,7 +67,7 @@
                     <li> Software Download & Installation</li>
                     <li> Initial Virtual Machine Setup</li>
                     <li> Initial Server Setup</li>
-                    <li> Initial Github Setup</li>
+                    <li> Cloning Github Code</li>
                 </ul>
 
             <li> Raspberry PI (RPi) Server Launching</li>
@@ -69,12 +79,18 @@
             <li> Final Testing</li>
 
         </ol>
-
+        
+        ASSUMPTIONS: <br/> <!-- Recall the <br/> tag forces a new line-->
+        1. Users are familiar with programming STM32 boards using Keil uVision5 and have it installed on testing system <br/> <!-- Recall the <br/> tag forces a new line-->
+        2. Users are familiar with using linux and using the linux terminal <br/> <!-- Recall the <br/> tag forces a new line-->
+        3. Users are familiar with programming STM32 boards using STM32CubeIDE 1.15.1 and have it installed on testing system <br/> <!-- Recall the <br/> tag forces a new line-->
+        4. Users are familiar with C programming <br/>
+        5. Users are familiar with programiming Arduinos and have Arduino IDE installed on testing system
     </p>
     <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
     <h2 id="week2"> Environmental Setup</h2> <!-- Recall the <id> tag will move the user to a particular point on the page -->
     <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
-    <h3>Software Download & Installation</h3>
+    <h3 id="week21">Software Download & Installation</h3>
     <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
         <p>
             For the purpose of testing this project the users are expected to be running Windows 10. This is to ensure the same testing
@@ -139,20 +155,29 @@
                 <li> Download the latest Ivanti Secure Access Client packages for Windows hosts </li>
             </ol>
 
+            
+        <li> Install the Oracle VirtualBox from the executable file downloaded above</li>
+        <li> Install the PuTTY from the executable file downloaded above</li>
+        <li> Install the Ivanti Secure Access Client from the executable file downloaded above</li>
     <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
-    <h3> Initial Virtual Machine Setup</h3>  
+    <h3 id="week22"> Initial Virtual Machine Setup</h3>  
     <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
 
     <ol> <!-- Ordered list tag-->
-        <li> Install the Oracle VirtualBox from the executable file downloaded above</li>
+        
         <li> Launch Oracle VirtualBox</li>
         <li> Press the "New" button to create a new virtual machine(VM)</li>
         <li> Name the VM something meaningful such as Project VI testing in the Name field</li>
         <li> In the ISO Image field press the drop down menu. Click Other and scroll to the Downloads folder and choose the ubuntu iso we downloaded in the previous step.</li> 
         <li> Check the box to Skip Unattended Installation and click Next.</li>
+        <li> Open the settings tab (while VM is off) and press Network</li>
+        <li> 
+            There will be a drop down menu next to the phrase "Attachted to:". In the drop down menu, ensure Bridged Adapter is chosen.
+            This step will ensure that our VM has a unique IP address assigned through DHCP so that we can access our website over the web.
+        </li>
         <li> Set a Base Memory of 8048MB and click next. </li>
         <li> Set a Disk Size of 100 GB and click next. Then click Finish.</li>
-        <li> Launch the VM and go through initial setup. The remaining commands will all be executed in the VM.e</li>
+        <li> Launch the VM and go through initial setup. The remaining commands will all be executed in the VM</li>
         <li> The following commands will download and install LAMPP server which will be used to host an HTML server. This installation method 
              will run the HTML server automatically upon the launch of the OS. Open the terminal and type the following commands: 
             <ul> <!-- Unordered list tag-->
@@ -164,7 +189,7 @@
     </ol>
 
     <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
-    <h3> Initial Server Setup</h3>  
+    <h3 id="week23"> Initial Server Setup</h3>  
     <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
 
     <ol> <!-- Ordered list tag-->
@@ -203,19 +228,221 @@
         </ol> <!-- Ordered list tag-->
 
     <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
-    <h3> Initial Github Setup</h3>  
+    <h3 id="week24"> Cloning github code </h3>  
     <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
-    <li> By this point the testing environment is setup. Only thing left will be to pull the code from Github </li>
- 
+    <li> By this point the testing environment is setup. This step will clone all the up-to-date code from the github repository
+         allowing the users acess to the code that can be used in the test envioronment. 
+    </li>
+
+    <li> Within the terminal input the following commands in order: </li>
     <ol> <!-- Ordered list tag-->
-        <li> Create a new directory that will host all the code by using the following command 
-             in the terminal: mkdir Project VI - which will create a new directory to place the code into.
-        </li>
-        <li> Traverse to the Project VI directory by using the following command in the terminal: cd Project VI/</li>
-        <li> In the terminal please type the following commands: NOTE: MAKE SURE YOU ARE IN THE PROJECT VI DIRECTORY</li>
-        <ul>
-            <li> git init - this will enable this folder to use github</li>
-            <li> git clone </li>
-        </ul>
-            
+        <li> cd /var/www/html </li>
+        <li> git clone https://github.com/JadFoukAladeh/P6.git</li>            
     </ol>
+    <li> All the code has now been cloned into a new repository P6. Traverse to P6 using the following command in the terminal: cd P6/ </li>
+    <li> To ensure main is unaffected input the following command in the terminal: git branch testing</li>
+   
+
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    <h2 id="week3"> Raspberry PI (RPi) Server Launching</h2> <!-- Recall the <id> tag will move the user to a particular point on the page -->
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+
+    <p> 
+        Each user will be assignmed to specific Raspberry Pi (RPi) to test the project. In this step the user will be guided through 
+        the initial connection to the RPi through VNC and SSH. The user will also pull the code from the repository to the RPi so the
+        server can be launched through the RPi. The elevator we have been asigned is number 4. The RPi running that elevator has the following:
+
+    </p>
+
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    <h3 id="week31"> Using Conestoga College WiFi Setup </h3>  
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    
+    <ol>
+        <li> Method #1: SSH</li>
+        <ul> 
+            <li> Launch PuTTY</li>
+            <li> In the ip address field, input the following IP address: 192.168.1.201</li>
+            <li> In the port field, input the following port#: 22</li>
+            <li> Press enter. This should now take you to a login screen. Enter the following credentials:</li>
+            <li> User name: pi</li>
+            <li> Password: ese</li>
+            <li> We are now connected to the RPi through SSH. </li>
+            <li> Type the following commands:</li>
+            <li> cd /var/www/html</li>
+            <li> git clone https://github.com/JadFoukAladeh/P6.git</li>    
+        </ul>
+
+        <li> Method #2: VNC</li>
+        <ul> 
+            <li> Launch VNC Viewer</li>
+            <li> In the ip address field, input the following IP address: 192.168.1.201</li>
+            <li> In the port field, input the following port#: 5900</li>
+            <li> Press enter. This should now take you to a login screen. Enter the following credentials:</li>
+            <li> User name: pi</li>
+            <li> Password: ese</li>
+            <li> We are now connected to the RPi through VNC. </li>
+            <li> Open the terminal and type the following commands:</li>
+            <li> cd /var/www/html</li>
+            <li> git clone https://github.com/JadFoukAladeh/P6.git</li>    
+        </ul>
+        
+        <li> Open a browser and launch type the following IP address to see our website launched on the RPi: 192.168.1.201</li>
+        
+    </ol>
+
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    <h3 id="week32"> Using Home/other WiFi Setup </h3>  
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    
+    <li> 
+        Launch Ivanti Secure Access Client. Login with Conestoga College Credentials. 
+        NOTE: IF THIS STEP DOESN'T WORK THE FOLLOWING STEPS WILL NOT WORK
+    </li>
+
+    <ol>
+        
+        <li> Method #1: SSH</li>
+        <ul>
+            <li> Launch PuTTY</li>
+            <li> In the ip address field, input the following IP address: 10.121.111.67</li>
+            <li> In the port field, input the following port#: 50012</li>
+            <li> Press enter. This should now take you to a login screen. Enter the following credentials:</li>
+            <li> User name: pi</li>
+            <li> Password: ese</li>
+            <li> We are now connected to the RPi through SSH. </li>
+            <li> Type the following commands:</li>
+            <li> cd /var/www/html</li>
+            <li> git clone https://github.com/JadFoukAladeh/P6.git</li>    
+        </ul>
+
+        <li> Method #2: VNC</li>
+        <ul> 
+            <li> Launch VNC Viewer</li>
+            <li> In the ip address field, input the following IP address: 10.121.111.67</li>
+            <li> In the port field, input the following port#: 50014</li>
+            <li> Press enter. This should now take you to a login screen. Enter the following credentials:</li>
+            <li> User name: pi</li>
+            <li> Password: ese</li>
+            <li> We are now connected to the RPi through VNC. </li>
+            <li> Open the terminal and type the following commands:</li>
+            <li> cd /var/www/html</li>
+            <li> git clone https://github.com/JadFoukAladeh/P6.git</li>    
+        </ul>
+        
+        <li> Open a firefox or google chrome and type the following IP address to see our website launched on the RPi: 10.121.111.67:50010</li>
+
+    </ol>
+
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    <h2 id="week4"> CAN Bus Testing</h2> <!-- Recall the <id> tag will move the user to a particular point on the page -->
+
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    <h3 id="week41"> Testing Prof. Michael Galle's code - on given platform of 2 nucleo boards connected as 2 nodes</h3> <!-- Recall the <id> tag will move the user to a particular point on the page -->
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    <p>
+         
+        The purpose of this step is to ensure that the Nucleo boards are functioning correctly. The code is available in the file code
+        within this repository. The code will be titled mgcode_testcode
+        
+        <ol>
+            <li> Copy the code and upload it through Keil uVision5 to both STM boards</li>
+            <li> Press the blue button. LED2 on both STM board will light up. Each STM board will light up for 2 seconds at a time. </li>
+            <li> This shows that both STM boards are functioning properly and we can contiune with our testing</li>
+        </ol>
+    </p>
+    
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    <h3 id="week42"> Testing group code - on given platform of 2 nucleo boards connected as 2 nodes</h3> <!-- Recall the <id> tag will move the user to a particular point on the page -->
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    <p>
+         
+        The purpose of this step is to ensure that our code is functioning correctly before launching it on the elevator boards. 
+        The code is available in the file code within this repository. The code will be titled test_code. This code is meant to mimic
+        the behaviour of Prof. Michael Galle's code to ensure CAN configuration has been done successfully.
+        
+        <ol>
+            <li> Copy the code and upload it through Keil uVision5 to both STM boards</li>
+            <li> Press the blue button. LED2 on both STM board will light up. Each STM board will light up for 2 seconds at a time. </li>
+            <li> This shows that both STM boards are functioning properly and we can contiune with our testing</li>
+        </ol>
+    </p>
+
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    <h2 id="week5"> Communications Between RPI, Arduino, and STM32F303RE</h2> <!-- Recall the <id> tag will move the user to a particular point on the page -->
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+
+    <p> 
+        The purpose of this step is to ensure CAN communiccation between the 6 nodes (4 STM boards, 1 Arduino board, 1 RPi). 
+        Each node will be expected to recieve and transmit to the other nodes.The code for the STM boards will be found in this repository 
+        in a file called code. The code will be labeled as comm_demo_code. The code for the Arduino will be labeled comm_code.
+        This code will enable us to show the current sender ID on the LCD attached to the elevator. The RPi should have the front_end and
+        back_end at this point to enable communication through the HTML page to the PHP code. 
+    </p>
+    <ol>
+        <li> Copy the code and upload it through STM32CubeIDE 1.15.1 to all STM boards attached to elevator</li>
+        <li> Copy the code and upload it through Arduino IDE to the Arduino board attached to elevator</li>
+        
+        <li> 
+            Press the blue button on one of the STM boards. LED2 then will turn on for 2 seconds on one board at a time. I
+            It will cycle through each STM board. Once that is complete, the RPi will send a message back and should 
+            light each LED2 on all the STM boards.
+        </li>
+        <li> 
+            The user simultaneously should see a message on the LCD display attached to the elevator. 
+            This message should have the unique ID of the board transmitting the message
+        </li>
+        <li>
+            For this comms demo the STM boards will have the filters set to accept the RPi's ID and Arduino's ID. This will ensure that when a message is sent from 
+            the RPi or Arduino, each STM board on the CAN bus when listening for data can pick up on it.
+        </li>
+        <li>
+            For this comms demo the Arduino board will have the filters set to accept the RPi's ID and STM boards IDs. 
+            This will ensure that when a message is sent from the RPi or STM boards, the Arduino board on the CAN bus when listening for data can pick up on it.
+        </li>
+        <li>
+            For this comms demo the RPi boards will have the filters set to accept the Arduino's ID and STM boards IDs. 
+            This will ensure that when a message is sent from the Arduino or STM boards, the RPi board on the CAN bus when listening for data can pick up on it.
+        </li>
+        
+    </ol>
+    
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    <h2 id="week6"> Final Testing</h2> <!-- Recall the <id> tag will move the user to a particular point on the page -->
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+
+    <p> 
+        The purpose of this step is to final test the elevator with all components working to spec. 
+        Each node will be expected to recieve and transmit to the other nodes.The code for the STM boards will be found in this repository 
+        in a file called code. The code will be labeled as final_code. The code for the Arduino will be labeled final_code.
+        This code will enable us to see the current floor the elevator is on and what state the door is currently in whether open or closed 
+        on the LCD attached to the elevator. The RPi should have the front_end and
+        back_end at this point to enable communication through the HTML page to the PHP code. 
+        
+        This demo is meant to be presented in person using a laptop that will connect over the elevator network.
+    </p>
+    <li> Copy the code and upload it through STM32CubeIDE 1.15.1 to all STM boards attached to elevator</li>
+    <li> Copy the code and upload it through Arduino IDE to the Arduino board attached to elevator</li>
+    <p>
+        VNC or SSH into the RPi and open the terminal. In the terminal type the following 2 commands one at a time to clone the latest code to update the server: <br/>
+        cd /var/www/html<br>
+        git clone https://github.com/JadFoukAladeh/P6.git 
+    </p>
+    <li> This demo will be demonstrated in two methods:</li>
+    <ol>
+        <li>Method 1: Using the HTML page </li>
+            <ol>
+                <li> On the windows 10 machine open firefox or google chrome</li>  
+                <li> Type the IP address of the RPi in the search bar: 192.168.1.202</li>  
+                <li> This should open up an HTML page that allows the elevator to be controlled through the broweser using a GUI.</li>
+                <li> The GUI will have 5 buttons: floor 1, floor 2, floor 3, open door, close door</li>
+                <li> User can now input a button press through the GUI and watch the elevator react. Whether go to a certain floor or open and close the door</li>
+            </ol>
+        <li>Method 2: Using the physical buttons </li>
+            <ol>
+                <li> User can now input a button press through on the physical buttons and watch the elevator react. Whether go to a certain floor or open and close the door</li>
+            </ol>
+    </ol>
+</body>
+
+</html>
