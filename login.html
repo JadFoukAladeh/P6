@@ -1,0 +1,25 @@
+  <!--
+
+    Written by:   Jad Fouk Aladeh
+    Date:         2024-05-21
+    Purpose:      The purpose of this HTML page is to act as an login page for the restricted-contents. Access to this file will require approval of sign up.
+		  
+  !-->
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Forms: Login Page</title>
+</head>
+<body>
+    <!-- Recall: post or get is an array that can be indexed using text -->
+    <form action="php/login.php" method="post">
+    <h1>Please Log In</h1>
+    <p>Username: <input type="text" name="username" required/></p>  <!-- Recall: name= sets the post/get array locations. Each index is text (for example password, username)-->
+    <p>Password: <input type="password" name="password"  required/></p>
+    <input type="submit" value="Log in" />
+    <p> <a href="index.html" > Request Access</a></p>
+    <p> <input type="image" value="Log in"/> <img src="https://us.123rf.com/450wm/boygointer/boygointer1507/boygointer150700498/42017070-open-source-button-on-isolate-white-background.jpg?ver=6"/></p>
+    </form>
+</body>
+</html>

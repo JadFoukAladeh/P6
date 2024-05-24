@@ -1,0 +1,61 @@
+  <!--
+
+    Written by:   Jad Fouk Aladeh
+    Date:         2024-05-21
+    Purpose:      The purpose of this HTML page is to act as an access request for the restricted-contents. Access to this file will require approval of sign up.
+		  
+  !-->
+
+  <!DOCTYPE html>
+  <html>
+      <head>
+          <!-- Website title that will be shown on the tab in the browser (not shown on page in browser)!-->
+          <title> Forms:	Access Request Page </title>
+      </head>
+  <body>
+      <!-- This will be the title of the page (shown in browser) !-->
+      <h1>Request Access</h1>
+  
+      <!-- This will be the form a user will need to fill out to request access to  !-->
+      <form action="php/request-acc.php" method="post" id="access">	<!-- Recall: <form> tag indicates that a form will be given to a user with inputs and outputs which will be handled by the backend-->
+              <fieldset> <!-- Recall: <fieldset> tag sets the input fields that the user needs to fill out-->
+                  <legend>User Information</legend>	<!-- Recall: <legend> tag gives the form a title-->
+                  <p>Are you a faculty memeber or student
+                      <select name="faculty_student">		<!-- Recall: <select> tag indicates that there will be a drop down menu-->
+                                                          <!-- Recall: <name> tag indicates the name of the list that can be accessed via programming -->
+                          <option value="no_answer" selected > </option> <!-- Recall: <option> tag indicates one of the options on the drop down menu-->
+                                                                         <!-- Recall: <selected> tag indicates default option selected on the drop down menu-->
+                          <option value="Faculty" > Faculty </option>
+                          <option value="Student" >Student</option>
+                          <option value="Other" > Other </option>
+                      </select>
+  
+                  </p>
+                  <p> <label>First Name: <input type="text" name="firstname" required /></label></p>
+                  <p> <label>Last Name: <input type="text" name="lastname" required/></label></p>
+                  <p> <label>Email: <input type="email" name="email" required/></label></p>
+                  <p> <label>Birth date: <input type="date" name="birthday" required/></label></p>
+                  <p> <label>Date: <input type="date" name="date" required/></label></p>
+              </fieldset>	
+      
+      
+      <p>	<h1>I currently... please check all that apply </h1> 
+          <input type="checkbox" name="involvement" value="none"/> Have no involvement <br />
+          <input type="checkbox" name="involvement" value="instructor"/> Professors overseeing Project VI <br />
+          <input type="checkbox" name="involvement" value="instructor_other"/> Professors that need access <br />
+          <input type="checkbox" name="involvement" value="student"/> Fellow cohort <br />
+          <input type="checkbox" name="involvement" value="student_other"/> Student <br />
+          <input type="checkbox" name="involvement" value="admin"/> College Admin <br />
+          <input type="checkbox" name="involvement" value="external"/> Other <br />
+      </p>
+  
+      <p> Tell us a bit about yourself</p>
+          <textarea>Other details...</textarea> <br />
+          <input type="submit" value="Submit Request" />
+  
+      </form>
+      <p> <a href="login.html" > Log In</a></p>
+  
+  </body>
+  </html>
+  
