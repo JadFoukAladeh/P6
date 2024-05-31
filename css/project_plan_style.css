@@ -1,0 +1,41 @@
+/*
+    Written by:   Jad Fouk Aladeh
+    Date:         2024-05-30
+    Purpose:      The purpose of this CSS page is to style the project_plan.html page using only CSS
+*/
+th:hover,
+td:hover#jad
+{
+    background-color: yellow;
+}
+
+th:hover,
+td:hover#jared
+{
+    background-color: green;
+}
+
+th:hover,
+td:hover#unassigned
+{
+    background-color: red;
+}
+
+table 
+{
+    border-spacing: 3px;
+    text-align: left;
+    border: 2px solid grey;
+    padding: 5px;
+}
+
+th,td
+{
+  border-spacing: 3px;
+  text-align: left;
+  border: 2px solid grey;
+  padding: 2px;
+  empty-cells: hide;
+}
+
+

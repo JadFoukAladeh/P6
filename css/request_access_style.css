@@ -1,0 +1,69 @@
+/*
+    Written by:   Jad Fouk Aladeh
+    Date:         2024-05-30
+    Purpose:      The purpose of this CSS page is to style the login.html page using only CSS
+*/
+.text_label
+{
+    float: left;
+    width: 100px;
+    text-align: right;
+    padding: 0px 10px 0px 0px;
+}
+
+.text_input
+{
+    width: 150px;
+    text-align: left;
+    padding: 0px 0px 0px 10px;
+}
+
+legend
+{
+    
+    background-color: darkblue;
+    color: white; 
+    border: 3px solid black; 
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    
+
+}
+
+fieldset
+{
+    background-color: darkblue;
+    color: white; 
+    border: 3px solid black; 
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    text-align: left;
+}
+
+
+link:hover
+{
+    background-color: yellow;
+}
+
+link:active
+{
+    background-color: green;
+}
+
+#test:hover
+{
+    background-color: purple;
+}
+p:hover.check
+{background-color: yellow;
+    color: green;}
+a:hover.div
+{
+    background-color: red;
+}
+#submit
+{ 
+    float: left;
+} 
+

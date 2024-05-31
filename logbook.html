@@ -1,7 +1,7 @@
  <!--
 
     Written by:   Jad Fouk Aladeh
-    Date:         2024-05-13
+    Date:         2024-05-30
     Purpose:      The purpose of this HTML page is to act as a weekly logbook for Project VI and to document weekly work accomplished.
   !-->
 <!DOCTYPE html> 
@@ -10,6 +10,32 @@
   <!-- Website title that will be shown on the tab in the browser (not shown on page in browser)-->
   <title>  Project VI - Logbook </title>
   <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+  <!-- Recall <meta> tags are used in the <head> element-->
+    <!-- These aren't all meta tags just the most popular-->
+    <!-- 
+      name="description" contains a description of the page
+      (will be displayed in the search results)
+    -->
+    <meta name="description" content="This is Jads logbook for our project"/>
+    
+    <!-- 
+      name="robot" specifies whether or not you want 
+      your website indexed by AI. NOTE: Doesn't mean 
+      they won't anyways. Just states your preference
+      content="noindex nofollow" - states no indexing or following
+    -->
+    <meta name="robots" content="noindex nofollow"/>
+    
+    <!-- https-equiv="author" sets the author of the page -->
+    <meta http-equiv="author" content="Jad Fouk Aladeh"/>
+    
+    <!-- 
+      https-equiv="pragma" content="no-cache" tells browser to reload 
+      this page every time and not store it in cache
+     -->
+    <meta http-equiv="pragma" content="no-cache"/>
+
+
 </head>
 <body>
   <!-- This will be the title of the page (shown in browser) !-->
@@ -46,7 +72,7 @@
   <h2 id="week1"> Week 1 </h2> <!-- Recall the <id> tag will move the user to a particular point on the page -->
 
 
-  <!-- This will be the unordered list (point form) of everything accomplished during week 1-->
+    <!-- This will be the unordered list (point form) of everything accomplished during week 1-->
   <ul> <!-- Recall the <ul> tag stands for unordered list, which will create a list using point form-->
 
     <li> Installed VScode on ubuntu virtual machine</li>
@@ -73,7 +99,7 @@
     <!-- ADDING IMAGES - BLOCK LEVEL (take up full width of page)-->
     <!-- Recall to use standard image resolutions for website - this will avoid long load times-->
     <figure>
-    <img src="Images/images.png" alt="Image of Keyblade" title="keyblade" width ="100" height="100"/> 
+    <img src="Images/test image.png" alt="Image of Keyblade" title="keyblade" width ="100" height="100"/> 
     <figcaption> <b> JAD</b></figcaption>
     <!-- -->>
     </figure>
@@ -92,9 +118,59 @@
       <li> Started wiring the elevator</li>
       <li> Started initial design for physical push buttons with brail</li>
       <li> Created elevator_input.html</li>
-      <li> </li>
   
     </ul>
 
+  <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+  <!-- This will be the subheading Week 2. This will be shown in browser !-->
+  <h2 id="week3"> Week 3 </h2> <!-- Recall the <id> tag will move the user to a particular point on the page -->
+  
+  
+      <!-- This will be the unordered list (point form) of everything accomplished during week 2-->
+      <ul> <!-- Recall the <ul> tag stands for unordered list, which will create a list using point form-->
+        <li> Started structuring about.html page</li>
+        <li> Applied solder to all STM32 shields as seen below</li>
+        <img src="Images/Jad applying solder.jpg" alt="Jad applying solder" title="Jad applying solder" width ="1000"/>
+        <!-- 
+          Recall for using images the tag should be as follows:
+            <img src="" alt="" title="" width=""/> (can also add height="")
+            src = source file where photos will be stored in our case its
+                  a file named Images found in this repository
+            alt = Alternative description that will be shown if photo can't be loaded
+            title = Title that user will see if they scroll over picture
+            width/height = set the height and width of the picture
+        -->
+        <!-- Recall <figcaption> tag adds a caption to the picture-->
+        <!-- Recall <b> tag bolds the text -->
+        <figcaption> 
+            <b>Figure 3.1 - Jad applying solder paste</b>
+        </figcaption>
+        <li> Populated all STM32 shields </li>
+        <li> Baked all STM32 shields </li>
+        <li> Cleaned off STM32 to get rid of flux as seen below</li>
+        <img src="Images/Jad cleaning boards.jpg" alt="Jad applying solder" title="Jad applying solder" width ="1000"/>
+        <!-- 
+          Recall for using images the tag should be as follows:
+            <img src="" alt="" title="" width=""/> (can also add height="")
+            src = source file where photos will be stored in our case its
+                  a file named Images found in this repository
+            alt = Alternative description that will be shown if photo can't be loaded
+            title = Title that user will see if they scroll over picture
+            width/height = set the height and width of the picture
+        -->
+        <!-- Recall <figcaption> tag adds a caption to the picture-->
+        <!-- Recall <b> tag bolds the text -->
+        <figcaption>
+            <b>Figure 3.2 - Jad cleaning STM32 shields with alcohol</b>
+        </figcaption>
+        
+        <li> Created css styling for: index.html, login.html, request_access.html, project_plan.html</li>
+        <li> Added photos and videos to website</li>
+        <li> Started resdisgning html pages to use bootstrap and css</li>
+        <li> Having issues implementing image rollovers</li>
+
+      </ul>
 </body>
+<!-- &copy; adds the copyright symbol-->
+<p> Copyright &copy; Jad Fouk Aladeh - 2024 </p>
 </html>
