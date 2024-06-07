@@ -1,0 +1,73 @@
+* /* Reset default margin and padding (8px default) */
+{
+    margin:  0; 
+    padding: 0;
+    border: none;
+}
+
+li.h_menu{display:inline; padding: 5px;}
+
+#logo{float: left; width: 150px;}
+
+.header
+{
+    position: fixed;
+    width: 600px; 
+    z-index:100px;
+    background-color: lightgray;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#header_menu
+{
+    position: absolute;
+    bottom: 15px;
+    left: 185px;
+}
+
+.main
+{
+    clear:left;
+    position: relative;
+    top: 75px;
+    border: 1px solid black;
+    text-align: center;
+    
+   /* width:600px;*/
+}
+
+p#feature
+{
+    width: 600px;
+    height: 200px;
+    background-color: #b4e193;
+}
+
+p#sub_feature1
+{
+    width: 200px;
+    background-color: #b4e193;
+}
+
+p#sub_feature2
+{
+    width: 200px;
+    background-color: #b292e3;
+}
+
+p#sub_feature3
+{
+    width: 200px;
+    background-color: #93dbe1;
+}
+
+p
+{
+    width: 300px;
+    height: 100px;
+    float: left;
+    background-color: gray;
+}
+
+#footer{clear:left;}
