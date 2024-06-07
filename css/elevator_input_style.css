@@ -1,0 +1,38 @@
+* /* Reset default margin and padding (8px default) */
+{
+    margin:  0; 
+    padding: 0;
+    border: none;
+}
+
+.buttons
+{
+    
+    text-align: center;
+}
+
+#i_view
+{
+    border: 3px solid red;
+    float:right;
+    
+    
+
+}
+
+#o_view
+{
+    border: 3px solid red;
+    float:left;
+    
+}
+
+footer
+{
+    position: absolute;
+    clear:left;
+    left:0;
+    bottom:0;
+    
+}
+

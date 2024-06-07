@@ -6,22 +6,22 @@
 
 a:link.menu
 {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: darkblue;
     text-decoration: none;
 }
 
 a:vistied.menu
 {
-    background-color: white;
-    color: pink;
+    background-color: gray;
+    color: red;
     text-decoration: none;
 }
 
 a:hover.menu
 {
     font-weight: bold;
-    background-color: grey;
+    background-color: green;
     
 }
 
@@ -29,4 +29,21 @@ a:active.menu
 {
     font-weight: bold;
     background-color: orange;
+}
+
+img:hover
+{
+    background-color: red;
+}
+
+header
+{
+    border: 1px solid black;
+    font-size: x-small;
+}
+
+.testing
+{
+    display:block;
+    
 }
