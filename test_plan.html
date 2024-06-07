@@ -1,0 +1,474 @@
+  <!--
+
+    Written by:      Jad Fouk Aladeh
+    Date:            2024-05-30
+    Purpose:         The purpose of this HTML page is to act as a test plan for Project VI
+
+  !-->
+  <!DOCTYPE html> 
+  <html lang="en">
+  <head>
+    <!-- Website title that will be shown on the tab in the browser (not shown on page in browser)-->
+    <title>  Project VI - Test Plan </title>
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+
+    <!-- Recall <meta> tags are used in the <head> element-->
+    <!-- These aren't all meta tags just the most popular-->
+    <!-- 
+      name="description" contains a description of the page
+      (will be displayed in the search results)
+    -->
+    <meta name="description" content="This is test plan for Project VI"/>
+          
+    <!-- 
+      name="robot" specifies whether or not you want 
+      your website indexed by AI. NOTE: Doesn't mean 
+      they won't anyways. Just states your preference
+      content="noindex nofollow" - states no indexing or following
+    -->
+    <meta name="robots" content="noindex nofollow"/>
+    
+    <!-- https-equiv="author" sets the author of the page -->
+    <meta http-equiv="author" content="Jad Fouk Aladeh"/>
+    
+    <!-- 
+    https-equiv="pragma" content="no-cache" tells browser to reload 
+    this page every time and not store it in cache
+    -->
+    <meta http-equiv="pragma" content="no-cache"/>
+  </head>
+  <body>
+    <!-- This will be the title of the page (shown in browser) !-->
+    <h1> Project VI - Test Plan - Jad Fouk Aladeh</h1>
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+  
+    <!-- This will be the title of the table of contents (shown in browser) !-->
+    <h2> Table of Contents</h2>
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+  
+    <!-- This will be the contents of the table of contents (shown in browser as an ordered list) !-->
+    <ol> <!-- Recall <ol> means ordered list, which means it'll count from 1 onwards-->
+  
+      <li> <a href="#week1">     Purpose</a></li>
+
+      <li> <a href="#week2">     Environmental Setup</a></li>
+      <ul> 
+        <li> <a href="#week21">  Software Download & Installation</a></li>
+        <li> <a href="#week22">  Initial Virtual Machine Setup</a></li>
+        <li> <a href="#week23">  Initial Server Setup</a></li>
+        <li> <a href="#week24">  Cloning Github Code</a></li>
+      </ul>
+
+      <li> <a href="#week3">     Raspberry PI (RPi) Server Launching</a></li>
+      <ul> 
+        <li> <a href="#week31">  Using Conestoga College WiFI Setup</a></li>
+        <li> <a href="#week32">  Using Home/other WiFI Setup</a></li>
+      </ul>
+
+      <li> <a href="#week4">     CAN Bus Testing</a></li>
+      <ul>
+        <li>  <a href="#week41">  Testing Prof. Michael Galle's code - on given platform of 2 nucleo boards connected as 2 nodes</a></li><!-- Recall the <id> tag will move the user to a particular point on the page -->
+        <li>  <a href="#week42">  Testing group code - on given platform of 2 nucleo boards connected as 2 nodes</a></li><!-- Recall the <id> tag will move the user to a particular point on the page -->
+      </ul>
+
+      <li> <a href="#week5">  Communications Between RPI, Arduino, and STM32F303RE</a></li>
+      <li> <a href="#week6">  Final Testing</a></li>
+      
+    </ol>
+  
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+  
+    <!-- This will be the subheading Purpose. This will be shown in browser !-->
+    <h2 id="week1"> Purpose </h2> <!-- Recall the <id> tag will move the user to a particular point on the page -->
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+
+    <p> <!-- Recall that <p> is a paragraph tag. This will show up in the browser as a paragraph-->
+        The purpose of this HTML page is to be used as the test plan for Project VI. The will guide the users through the testing needed for Project VI.
+        This test plan will fall into 5 categories as seen below:
+        <ol> <!-- Ordered list tag-->
+            <li> Environmental Setup - Ensuring all users have the same initial testing setup </li>
+            
+                <ul> <!-- Unordered list tag--> 
+                    <li> Software Download & Installation</li>
+                    <li> Initial Virtual Machine Setup</li>
+                    <li> Initial Server Setup</li>
+                    <li> Cloning Github Code</li>
+                </ul>
+
+            <li> Raspberry PI (RPi) Server Launching</li>
+
+            <li> CAN Bus Testing</li>
+
+            <li> Communications Between RPi, Arduino, and STM32F303RE </li>
+
+            <li> Final Testing</li>
+
+        </ol>
+        
+        ASSUMPTIONS: <br/> <!-- Recall the <br/> tag forces a new line-->
+        1. Users are familiar with programming STM32 boards using Keil uVision5 and have it installed on testing system <br/> <!-- Recall the <br/> tag forces a new line-->
+        2. Users are familiar with using linux and using the linux terminal <br/> <!-- Recall the <br/> tag forces a new line-->
+        3. Users are familiar with programming STM32 boards using STM32CubeIDE 1.15.1 and have it installed on testing system <br/> <!-- Recall the <br/> tag forces a new line-->
+        4. Users are familiar with C programming <br/>
+        5. Users are familiar with programiming Arduinos and have Arduino IDE installed on testing system
+    </p>
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    <h2 id="week2"> Environmental Setup</h2> <!-- Recall the <id> tag will move the user to a particular point on the page -->
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    <h3 id="week21">Software Download & Installation</h3>
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+        <p>
+            For the purpose of testing this project the users are expected to be running Windows 10. This is to ensure the same testing
+            environment on all computers to minimize errors in testing and findings. This section of the test plan will guide the
+            users through the environment setup procedure that is required. Following this procedure will allow the user to be able 
+            to:
+            <ul> <!-- Unordered list tag-->
+                <li> Launch a server from the Raspberry Pi</li>
+                <li> Connect remotely to a Raspberry Pi through local network and through VPN using VNC and SSH</li>
+                <li> Communicate with the server from a virtual machine</li>
+                <li> Use github to obtain the current code for the repository to be used for testing</li>
+            </ul>
+
+            There are 5 main software packages that need to be downloaded, which are as follows:
+            <ol> <!-- Ordered list tag-->
+                <li> Ubuntu 24.04 LTS - Image of Ubuntu being used</li>
+                <li> Oracle VM VirtualBox </li>
+                <li> VNC</li>
+                <li> PuTTY</li>
+                <li> Ivanti Secure Access Client</li>
+            </ol>
+        </p>
+
+        <h4> Ubuntu 24.04 LTS</h4>
+            <ol> <!-- Ordered list tag-->
+                <!-- Recall: this is an ABSOLUTE link to the website of the manufacturer of Ubuntu-->
+                <!-- Recall: the target="_blank" will open a new window for the absolute link. Keeping user on your website-->
+                <li> Open the following link: <a href="https://ubuntu.com/download/desktop" target="_blank">Ubuntu</a></li>
+                <li> Download the latest Ubuntu package for Windows hosts - current version (24.04 LTS)</li>
+                
+            </ol>
+
+        <h4> Oracle VM VirtualBox</h4>
+            <ol> <!-- Ordered list tag-->
+                <!-- Recall: this is an ABSOLUTE link to the website of the manufacturer of the VM-->
+                <!-- Recall: the target="_blank" will open a new window for the absolute link. Keeping user on your website-->
+                <li> Open the following link: <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank">Oracle VM VirtualBox</a></li>
+                <li> Download the latest VirtualBox platform packages for Windows hosts - current version (7.0.18)</li>
+            </ol>
+
+        <h4> VNC</h4>
+            <ol> <!-- Ordered list tag-->
+                <!-- Recall: this is an ABSOLUTE link to the website of the manufacturer of the VNC-->
+                <!-- Recall: the target="_blank" will open a new window for the absolute link. Keeping user on your website-->
+                <li> Open the following link: <a href="https://www.realvnc.com/en/connect/download/viewer/?__lai_s=0.08333333333333334&__lai_sr=5-9&__lai_sl=l" target="_blank">VNC</a></li>
+                <li> Download the latest VNC packages for Windows hosts - current version (7.11.1)</li>
+            </ol>
+            
+        <h4> PuTTY</h4>
+            <ol> <!-- Ordered list tag-->
+                <!-- Recall: this is an ABSOLUTE link to the website of the manufacturer of the PuTTY-->
+                <!-- Recall: the target="_blank" will open a new window for the absolute link. Keeping user on your website-->
+                <li> Open the following link: <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank">PuTTY</a></li>
+                <li> Download the latest PuTTY packages for Windows hosts - current version (0.81)</li>
+            </ol>
+
+        <h4> Ivanti Secure Access Client</h4>
+            <ol> <!-- Ordered list tag-->
+                <!-- Recall: this is an ABSOLUTE link to the website of the manufacturer of the PuTTY-->
+                <!-- Recall: the target="_blank" will open a new window for the absolute link. Keeping user on your website-->
+                <li> Open the following link: <a href="https://it.conestogac.on.ca/support/vpn" target="_blank">Ivanti Secure Access Client</a></li>
+                <li> Download the latest Ivanti Secure Access Client packages for Windows hosts </li>
+            </ol>
+
+            
+        <li> Install the Oracle VirtualBox from the executable file downloaded above</li>
+        <li> Install the PuTTY from the executable file downloaded above</li>
+        <li> Install the Ivanti Secure Access Client from the executable file downloaded above</li>
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    <h3 id="week22"> Initial Virtual Machine Setup</h3>  
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+
+    <ol> <!-- Ordered list tag-->
+        
+        <li> Launch Oracle VirtualBox</li>
+        <li> Press the "New" button to create a new virtual machine(VM)</li>
+        <li> Name the VM something meaningful such as Project VI testing in the Name field</li>
+        <li> In the ISO Image field press the drop down menu. Click Other and scroll to the Downloads folder and choose the ubuntu iso we downloaded in the previous step.</li> 
+        <li> Check the box to Skip Unattended Installation and click Next.</li>
+        <li> Open the settings tab (while VM is off) and press Network</li>
+        <li> 
+            There will be a drop down menu next to the phrase "Attachted to:". In the drop down menu, ensure Bridged Adapter is chosen.
+            This step will ensure that our VM has a unique IP address assigned through DHCP so that we can access our website over the web.
+        </li>
+        <li> Set a Base Memory of 8048MB and click next. </li>
+        <li> Set a Disk Size of 100 GB and click next. Then click Finish.</li>
+        <li> Launch the VM and go through initial setup. The remaining commands will all be executed in the VM</li>
+        <li> The following commands will download and install LAMPP server which will be used to host an HTML server. This installation method 
+             will run the HTML server automatically upon the launch of the OS. Open the terminal and type the following commands: 
+            <ul> <!-- Unordered list tag-->
+                <li> sudo apt-get install net-tools</li>
+                <li> sudo apt-get install lamp-server^</li>
+                <li> sudo apt-get install git</li>
+            </ul> <!-- Unordered list tag-->
+        </li>
+    </ol>
+
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    <h3 id="week23"> Initial Server Setup</h3>  
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+
+    <ol> <!-- Ordered list tag-->
+            <li> sudo apt-get install code - this will install Visual Studio Code</li>
+           
+            <li> Open Visual Studio Code install the following extensions: click Ctrl+Shift+x to open the Extensions tab. 
+                 Extensions can be installed by clicking the install button after searching for the extension needed.
+                <ul>
+                    <li> GitLens - Git supercharged</li>
+                    <li> Auto Close Tag</li>
+                    <li> Babel JavaScript</li>
+                    <li> Color Highlight</li>
+                    <li> file-icons</li>
+                    <li> GitHub Pull Requests</li>
+                    <li> PHP Intelephense</li>
+                    <li> Prettier - Code formatter</li>
+                    <li> Remote - SSH</li>
+                    <li> Remote - SSH: Editing Configuration Files</li>
+                    <li> Remote Explorer</li>
+                    <li> vscode-icons</li>
+                </ul>
+            </li>
+
+            <li> Within the terminal input the following cd /var/www/html </li>
+            
+            <li> touch index.html | sudo chmod -R 777 index.html - this will create a file which will be the index to the server linking all pages of the website.
+                 This file will be initialized with read, write, and execute priviliages. 
+            </li>
+            <li> In the explorer tab in Visual Studio Code on the left hand side of the screen, you should now see index.html</li>
+            <li> Open the index.html by clicking on it in Visual Studio Code. Type ! followed by Enter. This will create a dummy server that can be seen 
+                     through a broweser 
+            </li>
+            <li> In the terminal type hostname -I - this will give you the IPV4 address of the computer. Type this in the search bar of 
+                     google chrome or firefox. This should launch a blank html page. Which means your server is now setup.
+            </li>
+        </ol> <!-- Ordered list tag-->
+
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    <h3 id="week24"> Cloning github code </h3>  
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    <li> By this point the testing environment is setup. This step will clone all the up-to-date code from the github repository
+         allowing the users acess to the code that can be used in the test envioronment. 
+    </li>
+
+    <li> Within the terminal input the following commands in order: </li>
+    <ol> <!-- Ordered list tag-->
+        <li> cd /var/www/html </li>
+        <li> git clone https://github.com/JadFoukAladeh/P6.git</li>            
+    </ol>
+    <li> All the code has now been cloned into a new repository P6. Traverse to P6 using the following command in the terminal: cd P6/ </li>
+    <li> To ensure main is unaffected input the following command in the terminal: git branch testing</li>
+   
+
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    <h2 id="week3"> Raspberry PI (RPi) Server Launching</h2> <!-- Recall the <id> tag will move the user to a particular point on the page -->
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+
+    <p> 
+        Each user will be assignmed to specific Raspberry Pi (RPi) to test the project. In this step the user will be guided through 
+        the initial connection to the RPi through VNC and SSH. The user will also pull the code from the repository to the RPi so the
+        server can be launched through the RPi. The elevator we have been asigned is number 4. The RPi running that elevator has the following:
+
+    </p>
+
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    <h3 id="week31"> Using Conestoga College WiFi Setup </h3>  
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    
+    <ol>
+        <li> Method #1: SSH</li>
+        <ul> 
+            <li> Launch PuTTY</li>
+            <li> In the ip address field, input the following IP address: 192.168.1.201</li>
+            <li> In the port field, input the following port#: 22</li>
+            <li> Press enter. This should now take you to a login screen. Enter the following credentials:</li>
+            <li> User name: pi</li>
+            <li> Password: ese</li>
+            <li> We are now connected to the RPi through SSH. </li>
+            <li> Type the following commands:</li>
+            <li> cd /var/www/html</li>
+            <li> git clone https://github.com/JadFoukAladeh/P6.git</li>    
+        </ul>
+
+        <li> Method #2: VNC</li>
+        <ul> 
+            <li> Launch VNC Viewer</li>
+            <li> In the ip address field, input the following IP address: 192.168.1.201</li>
+            <li> In the port field, input the following port#: 5900</li>
+            <li> Press enter. This should now take you to a login screen. Enter the following credentials:</li>
+            <li> User name: pi</li>
+            <li> Password: ese</li>
+            <li> We are now connected to the RPi through VNC. </li>
+            <li> Open the terminal and type the following commands:</li>
+            <li> cd /var/www/html</li>
+            <li> git clone https://github.com/JadFoukAladeh/P6.git</li>    
+        </ul>
+        
+        <li> Open a browser and launch type the following IP address to see our website launched on the RPi: 192.168.1.201</li>
+        
+    </ol>
+
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    <h3 id="week32"> Using Home/other WiFi Setup </h3>  
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    
+    <li> 
+        Launch Ivanti Secure Access Client. Login with Conestoga College Credentials. 
+        NOTE: IF THIS STEP DOESN'T WORK THE FOLLOWING STEPS WILL NOT WORK
+    </li>
+
+    <ol>
+        
+        <li> Method #1: SSH</li>
+        <ul>
+            <li> Launch PuTTY</li>
+            <li> In the ip address field, input the following IP address: 10.121.111.67</li>
+            <li> In the port field, input the following port#: 50012</li>
+            <li> Press enter. This should now take you to a login screen. Enter the following credentials:</li>
+            <li> User name: pi</li>
+            <li> Password: ese</li>
+            <li> We are now connected to the RPi through SSH. </li>
+            <li> Type the following commands:</li>
+            <li> cd /var/www/html</li>
+            <li> git clone https://github.com/JadFoukAladeh/P6.git</li>    
+        </ul>
+
+        <li> Method #2: VNC</li>
+        <ul> 
+            <li> Launch VNC Viewer</li>
+            <li> In the ip address field, input the following IP address: 10.121.111.67</li>
+            <li> In the port field, input the following port#: 50014</li>
+            <li> Press enter. This should now take you to a login screen. Enter the following credentials:</li>
+            <li> User name: pi</li>
+            <li> Password: ese</li>
+            <li> We are now connected to the RPi through VNC. </li>
+            <li> Open the terminal and type the following commands:</li>
+            <li> cd /var/www/html</li>
+            <li> git clone https://github.com/JadFoukAladeh/P6.git</li>    
+        </ul>
+        
+        <li> Open a firefox or google chrome and type the following IP address to see our website launched on the RPi: 10.121.111.67:50010</li>
+
+    </ol>
+
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    <h2 id="week4"> CAN Bus Testing</h2> <!-- Recall the <id> tag will move the user to a particular point on the page -->
+
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    <h3 id="week41"> Testing Prof. Michael Galle's code - on given platform of 2 nucleo boards connected as 2 nodes</h3> <!-- Recall the <id> tag will move the user to a particular point on the page -->
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    <p>
+         
+        The purpose of this step is to ensure that the Nucleo boards are functioning correctly. The code is available in the file code
+        within this repository. The code will be titled mgcode_testcode
+        
+        <ol>
+            <li> Copy the code and upload it through Keil uVision5 to both STM boards</li>
+            <li> Press the blue button. LED2 on both STM board will light up. Each STM board will light up for 2 seconds at a time. </li>
+            <li> This shows that both STM boards are functioning properly and we can contiune with our testing</li>
+        </ol>
+    </p>
+    
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    <h3 id="week42"> Testing group code - on given platform of 2 nucleo boards connected as 2 nodes</h3> <!-- Recall the <id> tag will move the user to a particular point on the page -->
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    <p>
+         
+        The purpose of this step is to ensure that our code is functioning correctly before launching it on the elevator boards. 
+        The code is available in the file code within this repository. The code will be titled test_code. This code is meant to mimic
+        the behaviour of Prof. Michael Galle's code to ensure CAN configuration has been done successfully.
+        
+        <ol>
+            <li> Copy the code and upload it through Keil uVision5 to both STM boards</li>
+            <li> Press the blue button. LED2 on both STM board will light up. Each STM board will light up for 2 seconds at a time. </li>
+            <li> This shows that both STM boards are functioning properly and we can contiune with our testing</li>
+        </ol>
+    </p>
+
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    <h2 id="week5"> Communications Between RPI, Arduino, and STM32F303RE</h2> <!-- Recall the <id> tag will move the user to a particular point on the page -->
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+
+    <p> 
+        The purpose of this step is to ensure CAN communiccation between the 6 nodes (4 STM boards, 1 Arduino board, 1 RPi). 
+        Each node will be expected to recieve and transmit to the other nodes.The code for the STM boards will be found in this repository 
+        in a file called code. The code will be labeled as comm_demo_code. The code for the Arduino will be labeled comm_code.
+        This code will enable us to show the current sender ID on the LCD attached to the elevator. The RPi should have the front_end and
+        back_end at this point to enable communication through the HTML page to the PHP code. 
+    </p>
+    <ol>
+        <li> Copy the code and upload it through STM32CubeIDE 1.15.1 to all STM boards attached to elevator</li>
+        <li> Copy the code and upload it through Arduino IDE to the Arduino board attached to elevator</li>
+        
+        <li> 
+            Press the blue button on one of the STM boards. LED2 then will turn on for 2 seconds on one board at a time. I
+            It will cycle through each STM board. Once that is complete, the RPi will send a message back and should 
+            light each LED2 on all the STM boards.
+        </li>
+        <li> 
+            The user simultaneously should see a message on the LCD display attached to the elevator. 
+            This message should have the unique ID of the board transmitting the message
+        </li>
+        <li>
+            For this comms demo the STM boards will have the filters set to accept the RPi's ID and Arduino's ID. This will ensure that when a message is sent from 
+            the RPi or Arduino, each STM board on the CAN bus when listening for data can pick up on it.
+        </li>
+        <li>
+            For this comms demo the Arduino board will have the filters set to accept the RPi's ID and STM boards IDs. 
+            This will ensure that when a message is sent from the RPi or STM boards, the Arduino board on the CAN bus when listening for data can pick up on it.
+        </li>
+        <li>
+            For this comms demo the RPi boards will have the filters set to accept the Arduino's ID and STM boards IDs. 
+            This will ensure that when a message is sent from the Arduino or STM boards, the RPi board on the CAN bus when listening for data can pick up on it.
+        </li>
+        
+    </ol>
+    
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+    <h2 id="week6"> Final Testing</h2> <!-- Recall the <id> tag will move the user to a particular point on the page -->
+    <hr/> </hr> <!-- Recall the <hr/> tag draws a horizontal line-->
+
+    <p> 
+        The purpose of this step is to final test the elevator with all components working to spec. 
+        Each node will be expected to recieve and transmit to the other nodes.The code for the STM boards will be found in this repository 
+        in a file called code. The code will be labeled as final_code. The code for the Arduino will be labeled final_code.
+        This code will enable us to see the current floor the elevator is on and what state the door is currently in whether open or closed 
+        on the LCD attached to the elevator. The RPi should have the front_end and
+        back_end at this point to enable communication through the HTML page to the PHP code. 
+        
+        This demo is meant to be presented in person using a laptop that will connect over the elevator network.
+    </p>
+    <li> Copy the code and upload it through STM32CubeIDE 1.15.1 to all STM boards attached to elevator</li>
+    <li> Copy the code and upload it through Arduino IDE to the Arduino board attached to elevator</li>
+    <p>
+        VNC or SSH into the RPi and open the terminal. In the terminal type the following 2 commands one at a time to clone the latest code to update the server: <br/>
+        cd /var/www/html<br>
+        git clone https://github.com/JadFoukAladeh/P6.git 
+    </p>
+    <li> This demo will be demonstrated in two methods:</li>
+    <ol>
+        <li>Method 1: Using the HTML page </li>
+            <ol>
+                <li> On the windows 10 machine open firefox or google chrome</li>  
+                <li> Type the IP address of the RPi in the search bar: 192.168.1.202</li>  
+                <li> This should open up an HTML page that allows the elevator to be controlled through the broweser using a GUI.</li>
+                <li> The GUI will have 5 buttons: floor 1, floor 2, floor 3, open door, close door</li>
+                <li> User can now input a button press through the GUI and watch the elevator react. Whether go to a certain floor or open and close the door</li>
+            </ol>
+        <li>Method 2: Using the physical buttons </li>
+            <ol>
+                <li> User can now input a button press through on the physical buttons and watch the elevator react. Whether go to a certain floor or open and close the door</li>
+            </ol>
+    </ol>
+</body>
+<!-- &copy; adds the copyright symbol-->
+<p> Copyright &copy; Jad Fouk Aladeh - 2024 </p>
+</html>

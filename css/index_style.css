@@ -1,0 +1,32 @@
+/*
+    Written by:   Jad Fouk Aladeh
+    Date:         2024-05-30
+    Purpose:      The purpose of this CSS page is to style the proj_details.html page using only CSS
+*/
+
+a:link.menu
+{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+
+a:vistied.menu
+{
+    background-color: white;
+    color: pink;
+    text-decoration: none;
+}
+
+a:hover.menu
+{
+    font-weight: bold;
+    background-color: grey;
+    
+}
+
+a:active.menu
+{
+    font-weight: bold;
+    background-color: orange;
+}
