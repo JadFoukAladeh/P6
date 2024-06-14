@@ -141,7 +141,21 @@
     <li>helped record demo video of the elevator working with the external buttons</li>
     <li>met with Jad to discuss all changes done to the project</li>
   </ul>
-
+  <h2 id="week6"> Week 6</h2>
+  <ul>
+    <li>begun work on developing 3D assembly for door module</li>
+    <li>determined we would use a 2 segment door which would reduce the size of the overall unit when the door is open.</li>
+    <li>the inner of the 2 segments of the door will be connected to a lead screw which will move it along the door frame.</li>
+    <li>the outer segment will be pulled by a set of tongues on the back of the inner module, this will allow it to only be moved when the inner module pushes against it</li>
+    <li>at the moment the plan is to use a pair of limit switches to detect when the door is in the closed or open position.</li>
+    <li>when the door open limit switch is pressed, an interrupt will be triggered that will start a countdown, if a button is pressed then the door may close sooner, bt otherwise the door will remain open until the countdown is complete and after that the door will close and wait for another input</li>
+    <li>while the door is open floor requests will be stored in a queue or database waiting for the door to close for them to be processed</li>
+    <li>if one of the floor request buttons is pressed, the countdown will advance to 5 seconds and then the door will close allowing the elevator to go to that floor</li>
+    <li>will either use the RPi or the arduino to control the door motor</li>
+    <li>met with Jad to discuss all changes done to the project</li>
+    <img src="Images/doormodule.png" alt="door module" title="door module" width ="250"/><br />
+    
+  </ul>
   
 
 
