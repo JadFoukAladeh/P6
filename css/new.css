@@ -1,3 +1,13 @@
+
+/* Deal with old browsers that don't have HTML5 elements */
+header, section, footer, aside, nav article, figure{display:block;}
+* /* Reset default margin and padding (8px default) */
+{
+    margin:  0; 
+    padding: 0;
+    border: none;
+}
+
 h1
 {
     font-family: 'Times New Roman', Times, serif;
@@ -19,4 +29,5 @@ h3
     color:cadetblue;
 }
 
-ol.li{list-style-type: lower-roman;}
+
+:not(#b){list-style: upper-roman;}

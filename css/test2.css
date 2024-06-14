@@ -33,8 +33,7 @@ li.h_menu{display:inline; padding: 5px;}
     top: 75px;
     border: 1px solid black;
     text-align: center;
-    
-   /* width:600px;*/
+    width:600px;
 }
 
 p#feature
@@ -68,6 +67,52 @@ p
     height: 100px;
     float: left;
     background-color: gray;
+}
+
+input.imagee
+{
+    height:100px;
+    width: 100px;
+}
+input image:hover
+{
+    
+    color: yellow;
+    background-color: yellow;
+    opacity: 0.2;
+}
+#img:hover
+{
+    
+    color: yellow;
+    background-color: yellow;
+    opacity: 0.2;
+}
+#img:active
+{
+    
+    color: black;
+    background-color: black;
+    opacity: 0;
+}
+input:hover
+{
+    img{
+        display:none;
+    }
+    color: yellow;
+    background-color: yellow;
+    opacity: 0.2;
+}
+
+input:active
+{
+
+    img{
+        opacity: 0.2;
+    }
+    color: yellow;
+    background-color: yellow;
 }
 
 #footer{clear:left;}

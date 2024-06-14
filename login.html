@@ -43,20 +43,26 @@
     <h1>Please Log In</h1>
 
     <div>
-      <label for="user" class="text_label"> Username:</label>
-      <input id="user" type="username" class="text_input" name="username" required/>  <!-- Recall: name= sets the post/get array locations. Each index is text (for example password, username)-->
+      <label for="username" class="text_label"> Username:</label>
+      <input id="username" type="username" class="text_input" name="username" required/>  <!-- Recall: name= sets the post/get array locations. Each index is text (for example password, username)-->
     </div>
 
     <div>
-      <label for="pass" class="text_label"> Password:</label>
-      <input id="pass" type="password" class="text_input" name="password"  required/>
+      <label for="password" class="text_label"> Password:</label>
+      <input id="password" type="password" class="text_input" name="password"  required/>
     </div>
     
     <div> <input type="submit" value="Log in" id="submit"/></div>
     <div> <a id="req" href="request_access.html"> Request Access</a></div>
     <!--    <p> <input type="image" value="Log in" id="no"/> <img src="https://us.123rf.com/450wm/boygointer/boygointer1507/boygointer150700498/42017070-open-source-button-on-isolate-white-background.jpg?ver=6"/></p>
 -->
+    <div>
+      <p>Error Messages:</p>
+      <p id="feedback"></p>
+    </div>
   </form>
+
+  <script src="js/eventHandling.js"></script>
 </body>
   <!-- &copy; adds the copyright symbol-->
   <p> Copyright &copy; Jad Fouk Aladeh - 2024 </p>

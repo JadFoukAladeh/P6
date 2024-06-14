@@ -1,0 +1,147 @@
+/*
+    Written by:   Jad Fouk Aladeh
+    Date:         2024-06-13
+    Purpose:      The purpose of this CSS page is to style the login.html page using only CSS
+*/
+
+/* General font family and font size for the page */
+body, head
+{
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    font-size: 12;
+}
+
+/* Text label for input fields */
+.text_label
+{
+    /* Width of box containing text */
+    width: 100px;
+
+    /* Alignment of text labels. Align the text to the right and let the box float to the left*/
+    float: left; 
+    text-align: right;
+
+    /* Add 10px to the right of the text label */
+    padding: 0px 10px 0px 0px;
+
+    /* Bold it */
+    font-weight: bold;
+}
+
+/* Text input box */
+.text_input
+{
+    /* Width of input box */
+    width: 150px;
+
+    /* Alignment of input text in input box. Align the text to the left */
+    text-align: left;
+
+    /* Add 4px to the top and bottom and add 10px to the left of the text label - clockwise roatation*/
+    padding: 4px 0px 4px 10px;  
+}
+
+/* Drop down menu box */
+select
+{
+    /* Width of drop down menu box */
+    width: 100px;
+    
+    /* Set the position of the drop down menu box to relative to allow us to move it freely */
+    position: relative;
+
+    /* Set height and offset from left position */
+    left:110px;
+    height:50px;
+}
+
+/* Set header 1 color and font-size */
+h1
+{
+    color: blue;
+    font-size: xx-large;
+}
+
+/* Set header 2 color and font-size */
+h2
+{
+    color: blue;
+    font-size: large;
+}
+
+/* Set header 3 color and font-size */
+h3
+{
+    color: blue;
+    font-size:medium;
+}
+
+/* Style fieldset generally to have a round radius of 10px and a solid black border of 2px */
+fieldset
+{
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+/* Style fieldset id=user_info */
+#user_info
+{
+    background-color: lightgray;
+}
+
+/* Style fieldset id=involvment*/
+#involvment
+{
+    background-color: pink;
+}
+
+/* Styling textarea  - general */
+textarea
+{
+    /* Width and height of the textarea box */
+    width:  600px;                                         
+	height: 300px;  
+    /* Color of text when box isn't seleceted */                                    
+    color: #707172;        
+    /* Background image url, position, set not to repeat, set to scroll with page, and 30% of box area */                           
+    background-image:url("../Images/team logo.jpg");  
+    background-position: left bottom;                 
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 30%; 
+}
+
+/* Styling textarea, input text  - when selected text will be black and grey otherwise */
+.input_text:focus, textarea.text:focus
+{
+    color:black;
+}
+
+/* Styling textarea, input text  - when selected text will be black and grey otherwise */
+.input_text, textarea.text 
+{
+    color:gray;
+
+}
+
+/* Styling input submit button  - general */
+input#submit
+{
+    float:left;
+    background-color: blue;
+    color: white;
+}
+
+/* Styling input submit button  - hovering behaviour - psuedo class */
+input#submit:hover
+{
+    background-color: white;
+    color: blue;
+}
+
+/* Styling input submit button  - selection behaviour - psuedo class */
+input#submit:active
+{
+    background-color: black;
+    color: orange;
+}
