@@ -3,6 +3,16 @@
     Date:         2024-05-30
     Purpose:      The purpose of this CSS page is to style the proj_details.html page using only CSS
 */
+/* Deal with old browsers that don't have HTML5 elements */
+header, section, footer, aside, nav article, figure{display:block;}
+* /* Reset default margin and padding (8px default) */
+{
+    margin:  0; 
+    padding: 0;
+    border: none;
+}
+
+
 
 a:link.menu
 {
@@ -31,19 +41,3 @@ a:active.menu
     background-color: orange;
 }
 
-img:hover
-{
-    background-color: red;
-}
-
-header
-{
-    border: 1px solid black;
-    font-size: x-small;
-}
-
-.testing
-{
-    display:block;
-    
-}
