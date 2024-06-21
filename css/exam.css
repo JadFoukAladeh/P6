@@ -1,0 +1,16 @@
+form{
+    border: 3px solid black;
+}
+
+.text_label{
+    width:160 px;
+    float:left;
+    text-align: right;
+}
+
+.text_input{
+    width:150 px;
+    float:center;
+    padding: 0px 0px 0px 2px;
+    
+}

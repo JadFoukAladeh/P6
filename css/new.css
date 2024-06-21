@@ -30,4 +30,45 @@ h3
 }
 
 
-:not(#b){list-style: upper-roman;}
+header
+{
+    background-color: lightgrey;
+    border: 3px solid black;
+    float:left;
+    /* width: 800px; */
+}
+
+.menu
+{
+    color: red;
+    font-size:16px;
+    font-family:'Times New Roman', Times, serif;
+    float:left;
+    padding: 0px 5px 0px 0px;
+    
+}
+
+#h_menu, #TABLE
+{
+    display:inline;
+    
+}
+
+
+.menu:hover
+{
+    background-color: orange;
+    color: blue;
+}
+
+.menu:active
+{
+    background-color: white;
+    color: black;
+}
+
+.menu:visited
+{
+    color: purple;
+    
+}

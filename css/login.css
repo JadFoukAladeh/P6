@@ -1,0 +1,88 @@
+/*
+    Written by:   Jad Fouk Aladeh
+    Date:         2024-06-18
+    Purpose:      The purpose of this CSS page is to style the login.html page using only CSS
+*/
+* /* Reset default margin and padding (8px default) */
+{
+    margin:  0; 
+    padding: 0;
+    border: none;
+}
+
+.text_label
+{
+    float: left;
+    width: 100px;
+    text-align: right;
+    padding: 0px 10px 0px 0px;
+}
+
+.text_input
+{
+    width: 150px;
+    text-align: left;
+    padding: 0px 0px 0px 10px;
+    border: 1px solid black;
+}
+
+#submit
+{ 
+    width:70px;
+    padding: 5px;
+    margin-left: 180px;
+} 
+
+#submit:hover
+{
+    color: white;
+    background-color: blue;
+}
+
+#submit:active
+{
+    color: white;
+    background-color: orange;
+}
+
+header
+{
+    background-color: lightgrey;
+    border: 3px solid black;
+    /* width: 500px; */
+}
+
+
+.menu
+{
+    color: red;
+    font-size:16px;
+    font-family:'Times New Roman', Times, serif;
+    float:left;
+    padding: 0px 5px 0px 0px;
+    
+}
+
+#h_menu, #TABLE
+{
+    display:inline;
+    
+}
+
+.menu:hover
+{
+    background-color: orange;
+    color: blue;
+}
+
+.menu:active
+{
+    background-color: white;
+    color: black;
+}
+
+.menu:visited
+{
+    color: purple;
+    
+}

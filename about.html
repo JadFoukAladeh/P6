@@ -64,14 +64,39 @@
 
   </head>
   <body>
-    <div id="page" class="container">
-      <header>
-        <div class="row">
+    <div id="page" class="container g-0">
+      <header id="top_page">
+        <div class="row g-0">
           <div class="col-4">
-            <img id="logo" src="Images/team logo.jpg"/>
+            <img id="logo" src="Images/team logo.jpg" width="120"/>
           </div><!-- CLASS=COL-4 -->
           <div class="col-8">
             <nav>
+              <ul class="header_menu">
+                <!-- This will link to a child pagef which is a subdirectory that will contain everything related to Project VI !-->
+                <li id="h_menu"> <a class="menu" href="about.html">About</a></li>
+                <!-- This will link to a child pagef which is a subdirectory that will contain everything related to Project VI !-->
+                <li id="h_menu"> <a class="menu" href="logbook.html">Jads Logbook</a></li>
+                <!-- This will link to a child pagef which is a subdirectory that will contain everything related to Project VI !-->
+                <li id="h_menu"> <a class="menu" href="Jared_Hochstenbach_Logbook.html">Jareds Logbook</a></li>
+                <!-- This will link to a child pagef which is a subdirectory that will contain everything related to Project VI !-->
+                <li id="h_menu"> <a class="menu" href="proj_details.html">Project Details</a></li>
+                <!-- This will link to a child page which is a subdirectory that will contain everything related to status reports !-->
+                <li id="h_menu"> <a class="menu" href="status-reports.html">Status Reports</a></li>
+                <!-- This will link to a child page which is a subdirectory that will contain everything related to the test plan !-->
+                <li id="h_menu"> <a class="menu" href="test_plan.html">Test Plan</a></li>
+                <!-- This will link to a child page which is a subdirectory that will contain everything related to requesting access to backend!-->
+                <li id="h_menu"> <a class="menu" href="project_plan.html">Project Plan</a></li>
+                <!-- This will link to a child page which is a subdirectory that will contain everything related to requesting access to backend!-->
+                <li id="h_menu"> <a class="menu" href="elevator_input.html">Elevator control (under construction)</a></li>
+                <!-- This will link to a child pagef which is a subdirectory that will contain everything related to Project VI !-->
+                <!-- This will link to a child page which is a subdirectory that will contain everything related to login in !-->
+                <li id="h_menu"> <a class="menu" href="login.html">Login</a></li>
+                <!-- This will link to a child page which is a subdirectory that will contain everything related to requesting access to backend!-->
+                <li id="h_menu"> <a class="menu" href="request_access.html">Request Access</a></li>
+                <li id="h_menu"> <a class="menu" href="blah.html">js</a></li>
+                <!-- This will links to a child pagef which is a subdirectory that will contain everything related to Project VI !-->
+              </ul>
             </nav>
           </div> <!-- CLASS=COL-8 -->
         </div> <!-- CLASS=ROW -->
@@ -79,11 +104,12 @@
       
       <div id="content">
         <article>
+
           <section>
             <div class="row">
               <div class="col-12">
                 <!-- First header that will be shown on the in the browser (shown on page in browser)-->
-                <h1> About - Project VI</h1>
+                <h1> </br>About - Project VI</h1>
                 <!-- Recall <p> tag is a paragraph-->
                 <p> To be completed</p>
                 <!-- Recall <hr/> is a horizontal line-->
@@ -123,10 +149,10 @@
                 <h3 id="jh_bio"> Jared Hochstenbach </h3>
                 <p  id="jh_bio">  Jared will mainly focus on STM32 development</p>
                 <p id="info2"> </p>
-              
               </div>
 
             </div>
+
           </section>
         </article>
 
@@ -162,6 +188,17 @@
                 <iframe width="333" height="300" src="https://www.youtube.com/embed/bm1SnZPPb9A?si=O73DVxgW3NLWuzQv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <iframe width="333" height="300" src="https://www.youtube.com/embed/z7L0iYkUeqE" title="Phase 1 - LCD Demo showing movement to correct floor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <iframe width="333" height="300" src="https://www.youtube.com/embed/gqo8z7Ls5iw" title="Phase 1 - LED indicators working for floor input" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <h3> Phase 2 - Preperation</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/tm83UcUaYT4?si=cgExv_8uUfCZKJmY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                <iframe width="504" height="300" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               </div>
             </div>
 
@@ -201,15 +238,22 @@
 
       <footer>
         
-        <p id="foot"> </p>
-        <p id="date"> </p>
-        <p id="time"> </p>
-        <script  src="js/dateObjectModel.js"></script>
-        <!-- &copy; adds the copyright symbol-->
-        <!-- <p> Copyright &copy; Jad Fouk Aladeh - 2024 </p> -->
+        <div class="row">
+          <div class="col-12">
+            <p id="foot"> </p>
+            <p id="date"> </p>
+            
+            
+            <!-- &copy; adds the copyright symbol-->
+            <!-- <p> Copyright &copy; Jad Fouk Aladeh - 2024 </p> -->
+          </div> <!--class=col-12-->
+        </div><!--class=row-->
+        <a href="#top_page">Top of page</a>
       </footer>
     </div> <!-- ID=PAGE -->
+    
     <!-- Bootstrap Javascript script needed to use bootstraps -->
+    <script src="js/dateObjectModel.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 

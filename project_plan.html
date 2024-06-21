@@ -8,194 +8,615 @@
   !-->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
-    <title>Project VI - Project Plan</title>
-    <!-- Recall <meta> tags are used in tde <head> element-->
-    <!-- tdese aren't all meta tags just tde most popular-->
-    <!-- 
-      name="description" contains a description of tde page
-      (will be displayed in tde search results)
-    -->
-    <meta name="description" content="tdis is tde project plan for Project VI"/>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+        <title>Project VI - Project Plan</title>
+        <!-- Recall <meta> tags are used in tde <head> element-->
+        <!-- tdese aren't all meta tags just tde most popular-->
+        <!-- 
+        name="description" contains a description of tde page
+        (will be displayed in tde search results)
+        -->
+        <meta name="description" content="tdis is tde project plan for Project VI"/>
+        
+        <!-- 
+        name="robot" specifies whetder or not you want 
+        your website indexed by AI. NOTE: Doesn't mean 
+        tdey won't anyways. Just states your preference
+        content="noindex nofollow" - states no indexing or following
+        -->
+        <meta name="robots" content="noindex nofollow"/>
+        
+        <!-- https-equiv="autdor" sets tde autdor of tde page -->
+        <meta http-equiv="autdor" content="Jad Fouk Aladeh"/>
+        
+        <!-- 
+        https-equiv="pragma" content="no-cache" tells browser to reload 
+        tdis page every time and not store it in cache
+        -->
+        <meta http-equiv="pragma" content="no-cache"/>
+        <meta charset="utf-8"/>
     
-    <!-- 
-      name="robot" specifies whetder or not you want 
-      your website indexed by AI. NOTE: Doesn't mean 
-      tdey won't anyways. Just states your preference
-      content="noindex nofollow" - states no indexing or following
-    -->
-    <meta name="robots" content="noindex nofollow"/>
+        <!-- 
+            Ensure proper zoom and rendering:
+            content="width=device-width" sets the width of the page depnding on debice
+            initial-scale=1 sets the inital zoom level when page loads
+        -->
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
     
-    <!-- https-equiv="autdor" sets tde autdor of tde page -->
-    <meta http-equiv="autdor" content="Jad Fouk Aladeh"/>
+        
+        <!-- Linking Bootstraps CSS-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> <!-- CSS-->
     
-    <!-- 
-      https-equiv="pragma" content="no-cache" tells browser to reload 
-      tdis page every time and not store it in cache
-     -->
-    <meta http-equiv="pragma" content="no-cache"/>
-    <link href="css/project_plan_style.css" type="text/css" rel="stylesheet" />
-</head>
-<body>   
+        <!--[if It IE 9]>
+            <script 
+                src=http://http://html5shiv.googlecode.com/svm/trunk/html5.js> 
+            </script>
+        <![if It IE 9]-->
 
-    <div class="page">
-        <table>
-            <thead>
-                <div class="week headings">
-                    <tr>
-                        <th></th>
-                        <th>Week 1</th>
-                        <th>Week 2</th>
-                        <th>Week 3</th>
-                        <th>Week 4</th>
-                        <th>Week 5</th>
-                        <th>Week 6</th>
-                        <th>Week 7</th>
-                        <th>Week 8</th>
-                        <th>Week 9</th>
-                        <th>Week 10</th>
-                        <th>Week 11</th>
-                        <th>Week 12</th>
-                        <th>Week 13</th>
-                        <th>Week 14</th>
-                    </tr>
+        <link href="css/project_plan_style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="page" class="container">
+        
+            <header id="top_page">
+                <div class="row g-0">
+                <div class="col-4">
+                    <img id="logo" src="Images/team logo.jpg" width="120"/>
+                </div><!-- CLASS=COL-4 -->
+                <div class="col-8">
+                    <nav>
+                    <ul class="header_menu">
+                        <!-- This will link to a child pagef which is a subdirectory that will contain everything related to Project VI !-->
+                        <li id="h_menu"> <a class="menu" href="about.html">About</a></li>
+                        <!-- This will link to a child pagef which is a subdirectory that will contain everything related to Project VI !-->
+                        <li id="h_menu"> <a class="menu" href="logbook.html">Jads Logbook</a></li>
+                        <!-- This will link to a child pagef which is a subdirectory that will contain everything related to Project VI !-->
+                        <li id="h_menu"> <a class="menu" href="Jared_Hochstenbach_Logbook.html">Jareds Logbook</a></li>
+                        <!-- This will link to a child pagef which is a subdirectory that will contain everything related to Project VI !-->
+                        <li id="h_menu"> <a class="menu" href="proj_details.html">Project Details</a></li>
+                        <!-- This will link to a child page which is a subdirectory that will contain everything related to status reports !-->
+                        <li id="h_menu"> <a class="menu" href="status-reports.html">Status Reports</a></li>
+                        <!-- This will link to a child page which is a subdirectory that will contain everything related to the test plan !-->
+                        <li id="h_menu"> <a class="menu" href="test_plan.html">Test Plan</a></li>
+                        <!-- This will link to a child page which is a subdirectory that will contain everything related to requesting access to backend!-->
+                        <li id="h_menu"> <a class="menu" href="project_plan.html">Project Plan </a></li>
+                        <!-- This will link to a child page which is a subdirectory that will contain everything related to requesting access to backend!-->
+                        <li id="h_menu"> <a class="menu" href="elevator_input.html">Elevator control (under construction)</a></li>
+                        <!-- This will link to a child pagef which is a subdirectory that will contain everything related to Project VI !-->
+                        <!-- This will link to a child page which is a subdirectory that will contain everything related to login in !-->
+                        <li id="h_menu"> <a class="menu" href="login.html">Login</a></li>
+                        <!-- This will link to a child page which is a subdirectory that will contain everything related to requesting access to backend!-->
+                        <li id="h_menu"> <a class="menu" href="request_access.html">Request Access</a></li>
+                        <li id="h_menu"> <a class="menu" href="blah.html">js</a></li>
+                        <!-- This will links to a child pagef which is a subdirectory that will contain everything related to Project VI !-->
+                    </ul>
+                    </nav>
+                </div> <!-- CLASS=COL-8 -->
+                </div> <!-- CLASS=ROW -->
+            </header>
+            
+            <div id="content">
+                <article>
+                    <section>
+                        <div class="row">
+                            <div class="col-12"></div>
+                            <div class="phase_1">
+                                <h2>Phase 1</h2>
+                                <ol class="project_tasks">
+                                    <li class="task" id="p1_t1"> Task 1: Complete and sumbit a Project Plan</li>
+                                    <li class="task" id="p1_t2"> Task 2: Setup Raspberry Pi as Server and confirmed communication</li>
+                                    <ul>
+                                        <li class="task" id="p1_t2.1"> Setup Raspberry as a server</li>
+                                        <li class="task" id="p1_t2.2"> Confim communication between client computer and server (HTTP/SSH)</li>
+                                    </ul>
+                                    <li class="task" id="p1_t3"> Task 3: STM32 Programming via HAL</li>
+                                    <ul>
+                                        <li class="task" id="p1_t3.1"> Explain common CAN messaging protocol (see document)</li>
+                                        <li class="task" id="p1_t3.2"> Implement the CAN messaging protocol by properly setting the filters (code demo) on STM32</li>
+                                        <li class="task" id="p1_t3.3"> Implement Wiring on STM32, push buttons/LED indicators</li>
+                                        <li class="task" id="p1_t3.4">
+                                            Able to read CAN messages placed on the CAN bus (Raspberry Pi) and detect up/down request, floor
+                                            request, door open/close, location of elevator car
+                                        </li>
+                                        <li class="task" id="p1_t3.5">
+                                            Develop and implement a test plan to confirm functionality of software/hardware
+                                        </li>
+                                    </ul>
+                                    <li class="task" id="p1_t4"> Task 4: Controls/Indicators (virtual and physical hardware)</li>
+                                    <ul>
+                                        <li class="task" id="p1_t4.1"> Controls (up/down) built in HTML (possibly add CSS if students work ahead)</li>
+                                        <li class="task" id="p1_t4.2"> Elevator Car Controls (up/down/floor number) built in HTML (possibly CSS if students work ahead)</li>
+                                    </ul>
+                                    <li class="task" id="p1_t5">Task 5: Finite State Machine (recommended) - Develop Finite State Machine Logic for Elevator Operation </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="row">
+                            <div class="col-12"></div>
+                            <div class="phase_2">
+                                <h2>Phase 2</h2>
+                                <ol class="project_tasks">
+                                    <li class="tasks" id="p2_t1"> Task 1: User Interface / Client Program</li>
+                                    <ul>
+                                        <li class="tasks" id="p2_t1.1">Fully working and completed front end Graphical User Interface /Webpage to control elevator </li>
+                                        <li class="tasks" id="p2_t1.2">User action buttons/icons implemented</li>
+                                        <li class="tasks" id="p2_t1.3">Indicators/lights etc. implemented</li>
+                                        <li class="tasks" id="p2_t1.4">User action buttons developed to make changes to UI that are reflected in the database</li>
+                                        <li class="tasks" id="p2_t1.5">User indicator buttons change - changes in database are reflected in UI</li>
+                                    </ul>
+                                    <li class="tasks" id="p2_t2"> Task 2: Database Repository </li>
+                                    <ul>
+                                        <li class="tasks" id="p2_t2.1">Database set up and accepting values/commands from website</li>
+                                        <li class="tasks" id="p2_t2.2">Database has fields for logging information placed on the CAN bus</li>
+                                    </ul>
+                                    <li class="tasks" id="p2_t3"> Task 3: Diagnostic Reports</li>
+                                    <ul>
+                                        <li class="tasks" id="p2_t3.1">Produced based on content in database </li>
+                                        <li class="tasks" id="p2_t3.2">Displayed on webpage</li>
+                                    </ul>
+                                    <li class="tasks" id="p2_t4"> Task 4: Server Program</li>
+                                    <ul>
+                                        <li class="tasks" id="p2_t4.1">Users are authorized/authenticated based on username/password</li>
+                                        <li class="tasks" id="p2_t4.2">Server program provides logging data/accepts commands only from authorized users</li>
+                                    </ul>
+                                    <li class="tasks" id="p2_t5"> Task 5: Announce floor numbers (Function of the Client or Server Program) for users with Visual Impairments</li>
+                                    <ul>
+                                        <li class="tasks" id="p2_t5.1">Implement a Server Program for announcing the floor numbers</li>
+                                        <li class="tasks" id="p2_t5.2">Speaker on elevator used to announce the current/next floor (speaker already connected to system)</li>
+                                    </ul>
+                                    <li class="tasks" id="p2_t6"> Task 6: Sabbath mode (Function of the Client Program) - Users may operate the elevator without having to push buttons (e.g. verbally, based on schedule/time)</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+                
+                <article>
+                    <section>
+                        <div class="row">
+                            <div class="col-12">
+
+                            </div>
+                        </div>
+                    </section>
+                </article>
+                
+                <div class="phase_3">
+                    <h2>Phase 3</h2>
+                    <ol class="project_tasks">
+                        <li class="tasks" id="p3_t1">Task 1: CAN/LAN network communication</li>
+                        <ul>
+                            <li class="tasks" id="p3_t1.1">Research and Implement a CAN/LAN communication bridg</li>
+                            <li class="tasks" id="p3_t1.2">Ensure activity in CAN network changes values in database</li>
+                            <li class="tasks" id="p3_t1.3">Changes in User Interface/Website changes value in database and generate CAN messages</li>
+                            <li class="tasks" id="p3_t1.4">CAN Messages result in changes to database and GUI/Indicators</li>
+                            <li class="tasks" id="p3_t1.5">Commands from CAN/LAN networks are sent to the controller and move the elevator / indicate floor number</li>
+                        </ul>
+                        <li class="tasks" id="p3_t2">Task 2: Controller Software Written</li>
+                        <ul>
+                            <li class="tasks" id="p3_t2.1">CAN Supervisor (Raspberry Pi) relays messages between CAN/LAN Network (see sample program on Rpi)</li>
+                        </ul>
+                        <li class="tasks" id="p3_t3">Task 3: Finite State Machine logic written</li>
+                        <ul>
+                            <li class="tasks" id="p3_t3.1">Develop and Implement a finte state machine (using C/C+, PHP, Python to implement logic)</li>
+                        </ul>
+                        <li class="tasks" id="p3_t4">Task 4: Additional capability that shows ingenuity</li>
+                        <li class="tasks" id="p3_t5">Task 5: Ideas for Capstone (at least 3 per student)</li>
+                        <li class="tasks" id="p3_t6">Task 6: Final Presentation & Demonstration</li>
+                    </ol>
                 </div>
-            </thead>
-
-            <div class="gannt chart">
-                <tbody>
-                    <tr>
-                        <th>Task 1</th>
-                        <div class="weekly tasks"><td>
-                            Created logbook.html and status-reports.html templates - Assigned to Jad Fouk Aladeh
-                        </td></div>
-                        <div class="weekly tasks"> <td> Finish test_plan.html and project_plan.html - Assigned to Jad Fouk Aladeh</td></div>
-                        <div class="weekly tasks"> <td> Implement wiring for push buttons/LED indicators - Assigned to Jad Fouk Aladeh</td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td>Server program - to be assigned during team meeting</td></div>
-                        <div class="weekly tasks"> <td> CAN/LAN network communication</td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                    </tr>
-                    <tr>
-                        <th>Task 2</th>
-                        <div class="weekly tasks"><td>
-                            Created login.html, request_access.html, index.html(parent directory), index.html(P6 directory), linked all html pages togetder tdrough
-                            index.html(parent directory) - Assigned to Jad Fouk Aladeh
-                        </td></div>
-                        <div class="weekly tasks"> <td id="jared">Finish and test phase 1 of STM programming via HAL to be able to demo it on tde given 2 node platfrom - Assigned to Jared Hochstenbach</td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td>Announce floor numbers - will be assigned during team meeting</td></div>
-                        <div class="weekly tasks"> <td>Controller Software Written - will be assigned during team meeting</td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                    </tr>
-                    <tr>
-                        <th>Task 3</th>
-                        <div class="weekly tasks"> <td>Setup virtual machine and setup windows machine witd required software - Assigned to botd partners</td></div>
-                        <div class="weekly tasks"> <td>Link login.php to login.html - Assigned to Jad Fouk Aladeh</td></div>
-                        <div class="weekly tasks"> <td>Create 3D panel to hold tde elevator push buttons - Assigned to Jad Fouk Aladeh </td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td>Sabbatd mode - will be assigned during team meeting</td></div>
-                        <div class="weekly tasks"> <td>Finite State Machine logic written - will be assigned during team meetin</td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                    </tr>
-                    <tr>
-                        <th>Task 4</th>
-                        <div class="weekly tasks"><td>Test remote connection to RPi and test demo software preinstalled. Setup Raspberry Pi as a server- Assigned to Jad Fouk Aladeh </td></div>
-                        <div class="weekly tasks"><td>Resynchronize gitdub main branch due to push/pull issues - Assigned to Jad Fouk Aladeh</td></div>
-                        <div class="weekly tasks"><td>Finite State Machine - will be assigned during team meeting</td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td>Additional capability tdat shows ingenuity - will be assigned during team meeting</td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                    </tr>
-                    <tr>
-                        <th>Task 5</th>
-                        <div class="weekly tasks"><td>Setup gitdub repository for Project VI and clone it to RPi - Assigned to Jad Fouk Aladeh </td></div>
-                        <div class="weekly tasks"><td>Start planning 3D door assembly - Assigned to Jared Hochstenbach</td></div>
-                        <div class="weekly tasks"><td>User Interface/Client Program - will be assigned during team meeting</td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                    </tr>
-                    <tr>
-                        <th>Task 6</th>
-                        <div class="weekly tasks"><td>Review wiring diagram - Assigned to Jad Fouk Aladeh </td></div>
-                        <div class="weekly tasks"><td>Wire tde elevator according to wriing diagram and our configuration - Assigned to Jad Fouk Aladeh </td></div>
-                        <div class="weekly tasks"><td>Database Repository - will be assigned during team meeting</td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                    </tr>
-                    <tr>
-                        <th>Task 7</th>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"><td>Diagnostic Reports - will be assigned during team meeting</td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                        <div class="weekly tasks"> <td></td></div>
-                    </tr>
-                    <tr>  J.F = Jad Fouk Aladeh, J.H = Jared Hochstenbach, U = Unassigned</tr>                
-                </tbody>
             </div>
-        </table>
-    </div>
-</body>
-<!-- &copy; adds tde copyright symbol-->
-<p> Copyright &copy; Jad Fouk Aladeh - 2024 </p>
+        
+            
+            <table>
+
+                    <caption id="gantt">Project VI - Gantt Chart</caption>
+                    <thead>
+                        <div class="week headings">
+                            <tr>
+                                <th>Phase</th>
+                                <th>Task #</th>
+                                <th>Week 1</th>
+                                <th>Week 2</th>
+                                <th>Week 3</th>
+                                <th>Week 4</th>
+                                <th>Week 5</th>
+                                <th>Week 6</th>
+                                <th>Week 7</th>
+                                <th>Week 8</th>
+                                <th>Week 9</th>
+                                <th>Week 10</th>
+                                <th>Week 11</th>
+                                <th>Week 12</th>
+                                <th>Week 13</th>
+                                
+                            </tr>
+                        </div>
+                    </thead>
+        
+                    <div class="gannt chart">
+                        <tbody>
+                            <th rowspan="14">Phase 1</th>
+                            <tr>
+        
+        
+                                <tr>
+                                    <div class="weekly tasks"><th>Task 1</th></div>
+                                    <div class="weekly tasks"><td>Task 1</td></div>
+                                    
+                                </tr>
+                                <tr>
+                                    <th rowspan="3">Task 2</th>
+                                    <div class="weekly tasks"><td>Task 2.1</td></div>
+                                    
+        
+                                </tr>
+                                <tr>
+        
+                                    <div class="weekly tasks"><td>Task 2.2</td></div>
+                                    
+                                </tr>
+                                <tr>
+        
+                                    <div class="weekly tasks"><td colspan="2">Task 2.3</td></div>
+                                    
+        
+                                </tr>
+        
+                                <tr>
+                                    <th rowspan="5">Task 3</th>
+                                    <div class="weekly tasks"><td>Task 3.1</td></div>
+                                    
+        
+                                </tr>
+                                <tr>
+        
+                                    <div class="weekly tasks"><td></td></div>
+                                    <div class="weekly tasks"> <td id="jared">Task 3.2</td></div>
+                                    
+        
+                                </tr>
+                                <tr>
+        
+                                    <div class="weekly tasks"><td></td></div>
+                                    <div class="weekly tasks"> <td id="jared">Task 3.3</td></div>
+                                    
+        
+                                </tr>
+                                <tr>
+        
+                                    <div class="weekly tasks" id="bo" aria-hidden="true"><td></td></div>
+                                    <div class="weekly tasks"> <td id="jared">Task 3.4</td></div>
+                                    
+                                </tr>
+                                <tr>
+                                    <div class="weekly tasks"><td></td></div>
+                                    <div class="weekly tasks"> <td id="jared">Task 3.5</td></div>
+                                    
+        
+                                </tr>
+                                <tr>
+                                    <th rowspan="2">Task 4</th>
+                                    <div class="weekly tasks"><td colspan="2">Task 4.1</td></div>
+                                    
+                                    
+                                </tr>
+                                <tr>
+        
+                                    <div class="weekly tasks"><td></td></div>
+                                    <div class="weekly tasks"> <td id="jared">Task 4.2</td></div>
+                                    
+        
+                                </tr>
+                                <tr>
+                                    <th>Task 5</th>
+                                    <div class="weekly tasks"><td colspan="2">Task 5</td></div>
+                                
+        
+                                </tr>
+        
+        
+                            </tr>
+        
+                            <th rowspan="15">Phase 2</th>
+                            <tr>
+        
+                                <tr>
+                                    <div class="weekly tasks"><th rowspan="5">Task 1</th></div>
+                                    <div class="weekly tasks"><td></td></div>
+                                    <div class="weekly tasks"> <td id="jared"></td></div>
+                                    <div class="weekly tasks"> <td colspan="9">Task 1.1</td></div>
+                                    
+                                </tr>
+                                <tr>
+        
+                                    <div class="weekly tasks"><td></td></div>
+                                    <div class="weekly tasks"> <td id="jared"></td></div>
+                                    <div class="weekly tasks"> <td colspan="3">Task 1.2</td></div>
+                                    
+        
+                                </tr>
+                                <tr>
+        
+                                    <div class="weekly tasks"><td></td></div>
+                                    <div class="weekly tasks"> <td id="jared"></td></div>
+                                    <div class="weekly tasks"> <td colspan="3">Task 1.3</td></div>
+                                    
+                                </tr>
+                                <tr>
+        
+                                    <div class="weekly tasks"><td></td></div>
+                                    <div class="weekly tasks"> <td id="jared"></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td colspan="3">Task 1.4</td></div>
+                                   
+        
+                                </tr>
+                                <tr>
+        
+                                    <div class="weekly tasks"><td></td></div>
+                                    <div class="weekly tasks"> <td id="jared"></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td colspan="3">Task 1.5</td></div>
+                                    
+                                    
+        
+                                </tr>
+                                <tr>
+                                    <th rowspan="2">Task 2</th>
+                                    <div class="weekly tasks"><td></td></div>
+                                    <div class="weekly tasks"> <td id="jared"></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td colspan="3">Task 2.1</td></div>
+                                    
+        
+                                </tr>
+                                <tr>
+        
+                                    <div class="weekly tasks"><td></td></div>
+                                    <div class="weekly tasks"> <td id="jared"></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td ></td></div>
+                                    <div class="weekly tasks"> <td colspan="3">Task 2.2</td></div>
+                                    
+        
+                                </tr>
+                                <tr>
+                                    <th rowspan="2">Task 3</th>
+                                    <div class="weekly tasks"><td></td></div>
+                                    <div class="weekly tasks"> <td id="jared"></td></div>
+                                    <div class="weekly tasks"> <td colspan="6">Task 3.1</td></div>
+                                    
+        
+                                </tr>
+                                <tr>
+                                    <div class="weekly tasks"><td></td></div>
+                                    <div class="weekly tasks"> <td id="jared"></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td colspan="9">Task 3.2</td></div>
+                                    
+        
+                                </tr>
+                                <tr>
+                                    <th rowspan="2">Task 4</th>
+                                    <div class="weekly tasks"><td></td></div>
+                                    <div class="weekly tasks"> <td id="jared"></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td colspan="5">Task 4.1</td></div>
+                                    
+        
+                                </tr>
+                                <tr>
+        
+                                    <div class="weekly tasks"><td></td></div>
+                                    <div class="weekly tasks"> <td id="jared"></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td colspan="4">Task 4.2</td></div>
+                                    
+        
+                                </tr>
+                                <tr>
+                                    <th rowspan="2">Task 5</th>
+                                    <div class="weekly tasks"><td></td></div>
+                                    <div class="weekly tasks"> <td id="jared"></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td colspan="4">Task 5.1</td></div>
+                                    
+        
+                                </tr>
+                                <tr>
+        
+                                    <div class="weekly tasks"><td></td></div>
+                                    <div class="weekly tasks"> <td id="jared"></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td colspan="4">Task 5.2</td></div>
+                                    
+        
+                                </tr>
+        
+        
+        
+                            </tr>
+                            <th rowspan="11">Phase 3</th>
+                            <tr>
+        
+        
+                                <tr>
+                                    <div class="weekly tasks"><th rowspan="5">Task 1</th></div>
+                                    <div class="weekly tasks"><td></td></div>
+                                    <div class="weekly tasks"> <td id="jared"></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td colspan="3">Task 1.1</td></div>
+                                    
+                                </tr>
+                                <tr>
+        
+                                    <div class="weekly tasks"><td></td></div>
+                                    <div class="weekly tasks"> <td id="jared"></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td colspan="3">Task 1.2</td></div>
+                                    
+        
+                                </tr>
+                                <tr>
+        
+                                    <div class="weekly tasks"><td></td></div>
+                                    <div class="weekly tasks"> <td id="jared"></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td colspan="3">Task 1.3</td></div>
+                                    
+                                </tr>
+                                <tr>
+        
+                                    <div class="weekly tasks"><td></td></div>
+                                    <div class="weekly tasks"> <td id="jared"></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td colspan="3">Task 1.4</td></div>
+                                    
+        
+                                </tr>
+                                <tr>
+        
+                                    <div class="weekly tasks"><td></td></div>
+                                    <div class="weekly tasks"> <td id="jared"></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td colspan="3">Task 1.5</td></div>
+                                    
+        
+                                </tr>
+                                <tr>
+                                    <th>Task 2</th>
+                                    <div class="weekly tasks"><td></td></div>
+                                    <div class="weekly tasks"> <td id="jared"></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td colspan="3">Task 2</td></div>
+                                    
+        
+                                </tr>
+                                <tr>
+                                    <th>Task 3</th>
+                                    <div class="weekly tasks"><td></td></div>
+                                    <div class="weekly tasks"> <td id="jared"></td></div>
+                                    <div class="weekly tasks"> <td colspan="11" id="jared">Task 3</td></div>
+                                    
+        
+                                </tr>
+                                <tr>
+                                    <th>Task 4</th>
+                                    <div class="weekly tasks"><td></td></div>
+                                    <div class="weekly tasks"> <td id="jared"></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td></td></div>
+                                    <div class="weekly tasks"> <td colspan="5">Task 4</td></div>
+                                    
+        
+                                </tr>
+                                <tr>
+                                    <th>Task 5</th>
+                                    <div class="weekly tasks"><td></td></div>
+
+                                    <div class="weekly tasks"> <td colspan="11" id="jared">Task 5</td></div>
+                                    
+        
+                                </tr>
+        
+        
+        
+                            </tr>
+        
+        
+        
+                            <tr>  J.F = Jad Fouk Aladeh - Yellow, J.H = Jared Hochstenbach - Green, U = Unassigned - Red</tr>
+                        </tbody>
+                    </div>
+                
+            </table>
+            <aside></aside>  
+            <footer>
+            <div class="row">
+                <div class="col-12">
+                <p id="foot"> </p>
+                <p id="date"> </p>
+                <p id="time"> </p>
+                
+                <!-- &copy; adds the copyright symbol-->
+                <!-- <p> Copyright &copy; Jad Fouk Aladeh - 2024 </p> -->
+                </div> <!--class=col-12-->
+            </div><!--class=row-->
+            <a href="#top_page">Top of page</a>
+            </footer>
+            
+            <!-- Bootstrap Javascript script needed to use bootstraps -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        
+
+    </body>
+
 </html>
