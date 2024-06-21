@@ -3,6 +3,57 @@
     Date:         2024-05-30
     Purpose:      The purpose of this CSS page is to style the project_plan.html page using only CSS
 */
+
+/* Deal with old browsers that don't have HTML5 elements */
+header, section, footer, aside, nav article, figure{display:block;}
+
+body{font-size:20px;}
+h1
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16;
+    color:blue;
+}
+.weekly_tasks{empty-cells: hide;}
+th:hover,
+td:hover#jad
+{
+    background-color: yellow;
+}
+
+th:hover,
+td:hover#jared
+{
+    background-color: green;
+}
+
+th:hover,
+td:hover#unassigned
+{
+    background-color: red;
+}
+
+h2
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14;
+    color:darkcyan;
+}
+
+h3
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12;
+    color:cadetblue;
+}
+
+h4
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 10;
+    color:rgb(58, 155, 158);
+}
+
 th:hover,
 td:hover#jad
 {
@@ -26,7 +77,8 @@ table
     border-spacing: 3px;
     text-align: left;
     border: 2px solid grey;
-    padding: 5px;
+    padding: 2px;
+    empty-cells: hide;
 }
 
 th,td
@@ -36,6 +88,56 @@ th,td
   border: 2px solid grey;
   padding: 2px;
   empty-cells: hide;
+  border-collapse: collapse;
 }
 
+ol
+{list-style: upper-roman;
+    }
+
+ul{list-style: circle;}
+
+
+header
+{
+    background-color: lightgrey;
+    border: 3px solid black;
+    float:left;
+    /* width: 800px; */
+}
+
+.menu
+{
+    color: red;
+    font-size:16px;
+    font-family:'Times New Roman', Times, serif;
+    float:left;
+    padding: 0px 5px 0px 0px;
+    
+}
+
+#h_menu, #TABLE
+{
+    display:inline;
+    empty-cells: hide;
+}
+
+
+.menu:hover
+{
+    background-color: orange;
+    color: blue;
+}
+
+.menu:active
+{
+    background-color: white;
+    color: black;
+}
+
+.menu:visited
+{
+    color: purple;
+    
+}
 

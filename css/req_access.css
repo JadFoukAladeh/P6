@@ -81,12 +81,16 @@ fieldset
 {
     border-radius: 10px;
     border: 2px solid black;
+    padding: 0px 0px 0px 0px; 
+   
 }
 
 /* Style fieldset id=user_info */
 #user_info
 {
+
     background-color: lightgray;
+    
 }
 
 /* Style fieldset id=involvment*/
@@ -144,4 +148,45 @@ input#submit:active
 {
     background-color: black;
     color: orange;
+}
+header
+{
+    background-color: lightgrey;
+    border: 3px solid black;
+    float:left;
+    /* width: 800px; */
+}
+.menu
+{
+    color: red;
+    font-size:16px;
+    font-family:'Times New Roman', Times, serif;
+    float:left;
+    padding: 0px 5px 0px 0px;
+    
+}
+
+#h_menu, #TABLE
+{
+    display:inline;
+    
+}
+
+
+.menu:hover
+{
+    background-color: orange;
+    color: blue;
+}
+
+.menu:active
+{
+    background-color: white;
+    color: black;
+}
+
+.menu:visited
+{
+    color: purple;
+    
 }

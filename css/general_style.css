@@ -1,3 +1,13 @@
+
+/* Deal with old browsers that don't have HTML5 elements */
+header, section, footer, aside, nav article, figure{display:block;}
+* /* Reset default margin and padding (8px default) */
+{
+    margin:  0; 
+    padding: 0;
+    border: none;
+}
+
 h1
 {
     font-family: 'Times New Roman', Times, serif;
@@ -19,4 +29,54 @@ h3
     color:cadetblue;
 }
 
-ol.li{list-style-type: lower-roman;}
+h4
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 10;
+    color:rgb(58, 155, 158);
+}
+
+
+header
+{
+    background-color: lightgrey;
+    border: 3px solid black;
+    float:left;
+    /* width: 800px; */
+}
+
+.menu
+{
+    color: red;
+    font-size:16px;
+    font-family:'Times New Roman', Times, serif;
+    float:left;
+    padding: 0px 5px 0px 0px;
+    
+}
+
+#h_menu, #TABLE
+{
+    display:inline;
+    
+}
+
+
+.menu:hover
+{
+    background-color: orange;
+    color: blue;
+}
+
+.menu:active
+{
+    background-color: white;
+    color: black;
+}
+
+.menu:visited
+{
+    color: purple;
+    
+}
+
