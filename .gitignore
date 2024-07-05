@@ -1,2 +1,2 @@
 .*txt //this will ignore all text files (just testing of .gitignore)
-
+.*json 
