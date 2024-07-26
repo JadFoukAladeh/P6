@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <h2>Update, delete or add users to the database</h2>
+        <form action="../php/members2.php" method="post">
+            Username: <input type='text' name='username' /><em> - Use this to select a row for update/delete</em><br/>
+            Password: <input type='text' name='password' /><br/>
+            Old Username: <input type='text' name='old_username' /><em> - Use this to select a row for update/delete</em><br/>
+            Old Password: <input type='text' name='old_password' /><em> - Use this to select a row for update/delete</em><br/>
+            New Username: <input type='text' name='new_username' /><em> - Use this to select a row for update/delete</em><br/>
+            New Password: <input type='text' name='new_password' /><br/>
+            <input type="submit" value="INSERT" name="insert" />
+            <input type="submit" value="DELETE" name="delete" />
+            <input type="submit" value="UPDATE" name="update" />
+            <input type="submit" value="READ" name="read" />
+            
+        </form>
+    </body>
+</html>
