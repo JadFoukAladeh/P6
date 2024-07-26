@@ -156,9 +156,78 @@
     <img src="Images/doormodule.png" alt="door module" title="door module" width ="250"/><br />
     
   </ul>
-  
+  <h2 id="week7"> Week 7</h2>
+  <ul>
+    <li>on tuesday I met with Jad to discuss the progress on the project. he had fixed the 2 broken buttons on the 2 blue boards but now we were having an issue where nothing was working</li>
+    <li>I looked at the CAN bus and found that the DB9 port for the arduino had broke and was not actually connected to the board. </li>
+    <li>Jad worked on replacing it and on friday when we got to work on it I found that one of the wires connected to the arduino was disconnected. I plugged it back in based on the wires from the next elevator</li>
+    <li>Worked more on design file for the door. added a frame and adjusted the tolerances so that the door will not get stuck but will also not rattle around</li>
+    <li>did not get as much done this week as I hoped because we had 2 midterms to study for</li>
+    <li>I am planning on continuing to work on project over reading week</li>
+    <li>over reading week I am planning on working on the wiring for the door module to enable it to work properly
+      
+    </li>
+  </ul>
 
+  <h2 id="week9"> Week 9</h2>
+  <ul>
+    <li>continued working on design for the opening elevator doors</li>
+    <li>decided to use the lead screw and Z axis components from an Ender 3 3D printer as the motor and controls for the opening and closing of the doors</li>
+    <li>I was going to use the limit switches and stepper motor circuitry from project 4 but because of how the floor nodes are set up I am going to need to set up a seperate limit switch circuit mounted on a bread board as a solution</li>
+    <li>I also plan on repurposing code used in project 4 and modifying it so that the door is controlled by the floor update signal sent to the car controller node.</li>
+    <li>did not get as much done this week as I hoped because we had 2 midterms to study for</li>
+    <li>the reason I need a new limit switch circuit is because PC5 is in use with the lights on the blue board, and it was also the pin used in the past for the limit switch. as such I am going to rebuild the circuit for it using spare parts and connect it to PC7</li>
+    <li>one of my ideas was to mount the limit switch under the door so that as the door closes it would close the switch. I decided against this as it would be easier to just mount them at the ends of travel as wiring and operation will be simpler</li>
+    <li>the last part of the design of the housing is including a mounting point for the motor, and working on the weight distribution as it is very front heavy</li>
+  </ul>
 
+  <h2 id="week10"> Week 10</h2>
+  <ul>
+    <li>Attempted printing door module but discovered I had made it too large for my printer. it originally would have been about 20cmx40cm in the base</li>
+    <li>Since that would be too large for my 30x30x30 cm printer, I decided to try cutting the frame in half. this did not work and the print failed early on</li>
+    <li>I did not get much time to work on it because I was studying for the math midterm but on Thursday night I scaled down the module so it would be printable</li>
+    <li>An unfortunate side effect of the scaling was that I didn't properly adjust some of the walls and I ended up with a 4cm thick wall in one spot</li>
+    <li>During the debriefing the print is almost done and should be done by 4 pm on June 12 2024</li>
+    <li>begun debugging the code and and set up GPIO pins for the 2 limit switches and the 4 pins for the stepper motor</li>
+    <li>Jad is sick this week so I have not had a chance to meet with him yet and see what he has done</li>
+
+  </ul>
+
+  <h2 id="week11"> Week 11</h2>
+  <ul>
+    <li>finished print for the elevator body</li>
+    <li>tested motor control for the stepper motor on the control boards</li>
+    <li>discovered connector issue with the stepper cable</li>
+    <li>tried printing door for the door module but it failed twice. going to attempt to print it again over the weekend</li>
+    <li>Jad did not show up for debriefing again this week so I am planning to work on getting as much as I can for phase 2 working as I can over the weekend and coming week</li>
+    <li>told Jad to push whatever he has done working or not to the Github in order to provide me with an update on where we are at</li>
+    <li>Scheduled to have a Zoom meeting with Jad on saturday so he can show what we have working</li>
+    <li>going to take what he has done and start working on it myself to try and get the rest done myself.</li>
+    <li>beginning to go over all the database stuff in order to get it all working on my own incase jad has nothing</li>
+  </ul>
+
+  <h2 id="week12"> Week 12</h2>
+  <ul>
+    <li>after last fridays debrief I tried contacting Jad to arrange a meeting between us so we could discuss where we were on the project</li>
+    <li>also insisted that he upload whatever he had to the github so I could see what we were working with</li>
+    <li>Saturday evening we were supposed to have a meeting to discuss it but Saturday morning Jad asked for it to be rescheduled to Sunday evening. I agreed and that evening he did help with the thermodynamics lab</li>
+    <li>Sunday we were supposed to have a meeting, Jad still had not sent any of his stuff from the past 2 weeks to me and I still had no idea if he had done anything. Sunday night he missed the meeting and asked to reschedule it to Monday morning</li>
+    <li>Monday morning Jad did not show up and when he replied to text messages he agreed to a Zoom meeting that evening. I scheduled the meeting right after and sent him periodic reminders all day but that evening at the time of the meeting he did not show and did not send a text to ask to reschedule.</li>
+    <li>after Jad did not show up I sent an email to Michael and Ali asking for a 1 week extension in order to give myself more time to work on the databases and finishing up phase 2</li>
+    <li>Tuesday morning I went in to begin working on the databases and to see if there was anything on the Rpi that could help</li>
+    <li>used Michael's example code as a start point and worked on getting it working so that I could control the database from the website</li>
+    <li>found one line of code 'if(authenticated) {...}' was supposed to be 'if(authenticated = TRUE) {...}' and once i fixed that the code worked and I was able to manipulate the database from the website</li>
+    <li>tested this by adding to the database on the website and in the terminal and it showed the added data on both ends.</li>
+    <li>I saw Jad in Advanced Math on Tuesday but we did not talk</li>
+    <li>Wednesday morning Ali emailed me approving my 1 week extension.</li>
+    <li>Saw Jad on Thursday in Advanced Math but at this point I was sure he had not done anything towards the project in phase 2 and was focused on working solo.</li>
+    <li>friday morning worked on fixing the CAN communication</li>
+    <li>I had narrowed the issue down to the CAN bus not making contact between the arduino and the Rpi</li>
+    <li>Michael jumped in to help and he discovered that there was an issue with the pcan driver on the Rpi</li>
+    <li>Michael reinstalled it and we tested it and found that it worked once the driver had been reinstalled</li>
+    <li>for next week</li>
+    <li>plan on doing the diagnostics and the sabath mode along with audio for the floor indicators, and also finishing up anything else for phase 2 and working on my door module as my added feature</li>
+  </ul>
 </body>
 <!-- &copy; adds the copyright symbol-->
 <p> Copyright &copy; Jared Hochstenbach - 2024 </p>
