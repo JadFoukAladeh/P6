@@ -8,7 +8,7 @@ function connect(string $path, string $user, string $password) {
 }
 
 // Create
-function insert($path, $user, $password) {
+function insert($path, $user, $password) : void{
     $db = connect($path, $user, $password);
     $query = 'INSERT INTO authorizedUsers(username, password) VALUES
     (:username, :password)';
@@ -22,8 +22,8 @@ function insert($path, $user, $password) {
 }
 
 // Read
-function showtable(string $path, string $user, string $password) {
-    echo "<h3>Content of ElevatorNetwork table</h3>";
+function showtable(string $path, string $user, string $password) : void{
+    echo "<h3>Content of authorizedUsers table</h3>";
     $db = connect($path, $user, $password); 
     $query = "SELECT * FROM authorizedUsers";  // Note: Risk of SQL injection
     $rows = $db->query($query); 
@@ -34,34 +34,68 @@ function showtable(string $path, string $user, string $password) {
 }
 
 // Update
-function update(string $path, string $user, string $password1, string $tablename, string $new_password, string $new_username
-                , string $old_username) : void 
+function update($path,  $user,  $password, $username, $new_username, $new_password): void
 {
-    $db = connect($path, $user, $password1);
-    $a = 'SELECT id' . ' FROM ' . $tablename . 'WHEN username=:use1';
-    $statement = $db->prepare($a);
 
-    $statement->bindValue(':use1', $old_username);
-    //Print contents of the entire database
-    $rows = $db->query($statement);
+    $db = connect($path, $user, $password);
 
-    $query = 'UPDATE ' . $tablename . ' SET password=:pass, username=:use1 WHERE id=$rows' ;    // Note: Risks of SQL injection
+    $query = "UPDATE authorizedUsers 
+          SET username = :n_user, password = :n_pass 
+          WHERE username = :user";
+    
+    $statement = $db->prepare($query);
 
- 
-// Use the execute() function to execute the formatted insert - when formatted
-$result = $rows->execute();
-                           // Execute prepared statement
-
+    $params = [
+        'user'              => $username,
+        'n_user'            => $new_username, 
+        'n_pass'            => $new_password
+        
+    ];
+    
+    $result = $statement->execute($params); 
 }
+
 // Delete
-function delete(string $path, string $user, string $password, string $tablename, string $username) : void {
+function delete(string $path, string $user, string $password,  string $username) : void {
     
     $db = connect($path, $user, $password);
     
-    $query = 'DELETE FROM ' . $tablename . ' WHERE username = :user';    // Note: Risks of SQL injection
-    $statement = $db->prepare($query); 
-    $statement->bindValue(':user', $username);
-    $statement->execute();                      // Execute prepared statement
+    $query = 'DELETE FROM authorizedUsers WHERE username = :user' ;    // Note: Risks of SQL injection
+    // Prepare the dynamic data
+    $statement = $db->prepare($query);
+    
+    $params = [
+        ':user'              => $username
+        
+    ];
+    
+    // Use the execute() function to execute the formatted insert - when formatted
+    $result = $statement->execute($params);    // Execute prepared statement
 }
 
+
+/*  LOGGING FUNCTIONS FOR THE DATABASE   */
+function insert_log($path, $user, $password,  string $action, $current_date, $current_time, $log, $username) {
+    // Connect to the database 
+    $db = connect($path, $user, $password);
+    
+    // Create query 
+    $query = 'INSERT INTO '. $log . '(date,  time,  action,  username,  password) VALUES
+                              (:date, :time, :action, :username, :password)';
+    // Specify query inputs 
+    $params = [
+        'date' => $current_date['CURRENT_DATE()'],
+        'time' => $current_time['CURRENT_TIME()'],
+        'action' => $action, 
+        'username' => $username,
+        'password' => $password
+    ];
+    
+    // Prepare query 
+    $statement = $db->prepare($query);
+
+    // Execute query
+    $result = $statement->execute($params); 
+
+}
 ?>

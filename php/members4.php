@@ -22,18 +22,24 @@
         $current_date = $curr_date_query->fetch(PDO::FETCH_ASSOC);
         $current_time_query = $db->query('SELECT CURRENT_TIME()');
         $current_time = $current_time_query->fetch(PDO::FETCH_ASSOC);
-        if(isset($_POST['username'])) {$user_cur = $_POST['username']; }
-        if(isset($_POST['old_username'])) {$username = $_POST['old_username']; }
-        if(isset($_POST['old_password'])) {$old_password = $_POST['old_password']; }
-        if(isset($_POST['new_username'])) {$new_username = $_POST['new_username']; }
-        if(isset($_POST['new_password'])) {$new_password = $_POST['new_password']; }
+        if(isset($_POST['Up'])) {$Up = $_POST['Up']; }
+        if(isset($_POST['Down'])) {$Down = $_POST['Down']; }
+        if(isset($_POST['firstFloor'])) {$firstFloor = $_POST['firstFloor']; }
+        if(isset($_POST['secondFloor'])) {$secondFloor = $_POST['secondFloor']; }
+        if(isset($_POST['thirdFloor'])) {$thirdFloor = $_POST['thirdFloor']; }
         
-        // Display welcome and form\
+        // Display welcome and form
      
-        require '../databases/form.html';
+        require '../databases/a.html';
         echo "<h1>Welcome, " . $_SESSION['username'] . "</h1>"; 
-        if(isset($_POST['insert'])) {
+        if(isset($Up)) {
             echo "You pressed INSERT <br>"; 
+            echo "<script>
+                var audio = new Audio('path_to_your_audio_file.mp3');
+                audio.play();
+                
+
+                </script>"
             insert($path, $user, $password);
             insert_log($path, $user, $password, "insert",$current_date, $current_time,$tablename,$user_cur );
 			

@@ -4,7 +4,7 @@
     session_destroy();
 
     echo "you've been logged out";
-    echo "Log in again here <a href=\../P6/exam.html >Here</a>";
+    echo "Log in again here <a href=../P6/login.html >Here</a>";
 
 
 

@@ -88,66 +88,63 @@
           <div id="content">
           
             
-            <article class="buttons">
-
-              <div class="row">
-                <section id="i_view">
-                  <h1> Inside Elevator View</h1>
-                  <div class="col-6">
-                    <div class="d-flex justify-content-center">
-                      <button  type="button" class="btn btn-danger p-5 rounded-circle btn-lg"  data-bs-toggle="button" autocomplete="off">1</button>
+            <form action="php/testing.php" method="post">
+              <article class="buttons">
+                <div class="row">
+                  <section id="i_view">
+                    <h1> Inside Elevator View</h1>
+                    <div class="col-6">
+                      <div class="d-flex justify-content-center">
+                        <input  type="submit" class="btn btn-danger p-5 rounded-circle btn-lg"  data-bs-toggle="button" autocomplete="off">1</input>
+                      </div>
+                      <div class="d-flex justify-content-center">
+                        <input  type="submit" class="btn btn-warning p-5 rounded-circle btn-lg" data-bs-toggle="button" autocomplete="off">2</input>
+                      </div>
+                      <div class="d-flex justify-content-center">
+                        <input  type="submit" class="btn btn-success p-5 rounded-circle btn-lg" data-bs-toggle="button" autocomplete="off">3</input>
+                      </div>
                     </div>
-                    <div class="d-flex justify-content-center">
-                      <button  type="button" class="btn btn-warning p-5 rounded-circle btn-lg" data-bs-toggle="button" autocomplete="off">2</button>
+                    <div class="col-6">
+                      <div class="d-flex justify-content-center">
+                        <input type="submit" class="btn btn-default"  data-bs-toggle="button" autocomplete="off">
+                          <svg id="l_arrow" xmlns="http://www.w3.org/2000/svg" data-bs-toggle="icon" width="80" height="80" color="red" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+                          </svg>
+                        </input>
+                        <input type="submit" class="btn btn-default"  data-bs-toggle="button" autocomplete="off">
+                          <svg id="r_arrow" xmlns="http://www.w3.org/2000/svg" data-bs-toggle="icon" width="80" height="80" fill="red" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                          </svg>
+                        </input>
+                      </div>
                     </div>
-                    <div class="d-flex justify-content-center">
-                      <button  type="button" class="btn btn-success p-5 rounded-circle btn-lg" data-bs-toggle="button" autocomplete="off">3</button>
-                    </div>
-                  </div>
-                  <div class="col-6">
-                    <div class="d-flex justify-content-center">
-                      <button type="button" class="btn btn-default"  data-bs-toggle="button" autocomplete="off">
-                        <svg id="l_arrow" xmlns="http://www.w3.org/2000/svg" data-bs-toggle="icon" width="80" height="80" color="red" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
-                        </svg>
-                      </button>
-                      <button type="button" class="btn btn-default"  data-bs-toggle="button" autocomplete="off">
-                        <svg id="r_arrow" xmlns="http://www.w3.org/2000/svg" data-bs-toggle="icon" width="80" height="80" fill="red" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
-                        </svg>
-                      </button>
+                  </section>
+                </div>
+                <section id="o_view">
+                  <h1> Outside Elevator View</h1>
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="d-flex justify-content-center">
+                        <input type="submit" class="btn btn-default" data-bs-toggle="button" autocomplete="off">
+                          <svg id="u_arrow" xmlns="http://www.w3.org/2000/svg" color="red" width="80" height="80" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+                          </svg>
+                        </input>
+                      </div>
+              
+                      <div class="d-flex justify-content-center">
+                        <input id="d_arrow" type="submit"  class="btn btn-default"  data-bs-toggle="button" autocomplete="off">
+                          <svg xmlns="http://www.w3.org/2000/svg" color="red" width="80" height="80" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z"/>
+                          </svg>
+                        </input>
+                      </div>
                     </div>
                   </div>
                 </section>
-              </div>
-          
-
-              <section id="o_view">
-                <h1> Outside Elevator View</h1>
-                <div class="row">
-                  <div class="col-12">
-                    <div class="d-flex justify-content-center">
-                      <button type="button" class="btn btn-default" data-bs-toggle="button" autocomplete="off">
-                        <svg id="u_arrow" xmlns="http://www.w3.org/2000/svg" color="red" width="80" height="80" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
-                        </svg>
-                      </button>
-                    </div>
-          
-
-                  
-                    <div class="d-flex justify-content-center">
-                      <button id="d_arrow" type="button"  class="btn btn-default"  data-bs-toggle="button" autocomplete="off">
-                        <svg xmlns="http://www.w3.org/2000/svg" color="red" width="80" height="80" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z"/>
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            
-            </article>
+              
+              </article>
+            </form>
           
             <article>
               <div class="row">

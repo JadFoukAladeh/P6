@@ -32,3 +32,5 @@ foreach($rows as $row){
     var_dump($row);
     echo "<br/><br/>";
 }
+
+?>

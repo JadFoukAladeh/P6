@@ -3,8 +3,10 @@
 $db = new PDO(
     'mysql:host=127.0.0.1;dbname=elevator',     // Data source name
     'jad',                                      // Username
-    'ese'
-);                                              // Password
+    'ese'                                       // Password
+);                                              
+
+
 // Return arrays with keys that are the name of the fiels 
 
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
@@ -12,9 +14,9 @@ $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 // Formatted Query
 $query = 'SELECT * FROM elevatorNetwork WHERE nodeID =:nodeID'; //IDS parameter
 $statement = $db->prepare($query);                              //Create statement from query text
-$statement -> bindValue('nodeID',2);                            //Replace :nodeID with 1
+$statement -> bindValue('nodeID',1);                            //Replace :nodeID with 1
 $result = $statement->execute();                                //Execute parameterized query
-$rows=$statement->fetchAll();                                   //E
+$rows=$statement->fetchAll();                                   //Returns all rows as arrays
 
 
 foreach($rows as $row){
