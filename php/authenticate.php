@@ -1,32 +1,43 @@
 <?php
+
 //  new (uses sessions)
-    session_start();    //start session
-    $var = true;
-    $users = file_get_contents('../js/exam.json');
-    $usersArray = json_decode($users, true);
+    session_start();    //start session - cruicial for short term storage (i.e keeping client logged in during session)
+
+    // Obtain password and username from session
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $authenticated = FALSE;
     
-    foreach($usersArray as $key => $user)
-    {
+    // Select the database you want to use
+    $db = new PDO(
+        'mysql:host=127.0.0.1;dbname=elevator',     // Data source name
+        'jad',                                      // Username
+        'ese'                                       // Password
+    );  
 
+    //Return arrays with keys that are the name of the fiels 
+    $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
-        if(($usersArray[$key]['user'] == $_POST['username']))
-        {
-            echo "Welcome user";
-            $_SESSION['username']=$username;
-            echo "<p>Congratulations, you are now logged ino the site</p>";
-            echo "<p> Please click <a href=\P6/php/members.php\> Here </a></p>";
-            $var=false;
-            break;
+    //Obtain everything from the authorizedUsers and check for given username
+    $rows = $db->query("SELECT * FROM authorizedUsers WHERE username='$username'");
 
+    //Authenticate against the database
+    foreach($rows as $row){
+        echo $row['username'];
+        if($username === $row['username'] && $password === $row['password']){
+            $authenticated = TRUE;
         }
-        
+    }
 
-    } 
-
-    
-    if($var)
+    // Check if user has been validated
+    if($authenticated) // Valid user
     {
-        echo "<p> Please enter a valid username and password. Back to login page: <a href='../exam.html'> Here </a> </p>";
-
+        $_SESSION['username'] = $username;
+        echo "<p> Congrats, you are logged in</p>";
+        echo "<p> Click <a href='members.php'>here</a> to goto the members only page</p>";
+    }
+    else
+    {
+        echo "<p> You are not authenticated!!!!</p>";
     }
 ?>

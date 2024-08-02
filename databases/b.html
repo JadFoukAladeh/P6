@@ -91,7 +91,7 @@
                     <li id="h_menu"> <a class="menu" href="../login.html">Login</a></li>
                     <!-- This will link to a child page which is a subdirectory that will contain everything related to requesting access to backend!-->
                     <li id="h_menu"> <a class="menu" href="../request_access.html">Request Access</a></li>
-                    <li id="h_menu"> <a class="menu" href="../blah.html">js</a></li>
+                    
                     <!-- This will link to a child pagef which is a subdirectory that will contain everything related to Project VI !-->
                   </ul>
                 </nav>
@@ -107,35 +107,15 @@
   
                 <div class="row g-0">
                   <div class="col-12">
-                    <h2>Update, delete or add data to the database</h2>
+                    <h2>View tables from database</h2>
                   </div> <!--class=col-12-->
                 </div> <!--class=row-->
             
           </form>
-                <form action="../php/members.php" method="post">
+                <form action="../php/members3.php" method="post">
                   <div class="row g-0">
                     <div class="col-12">
                       <!-- Recall: post or get is an array that can be indexed using text -->
-                        <div>
-                          <label for="nodeID" class="text_label"> Node ID:</label>
-                          <input id="nodeID" type="nodeID" class="text_input" name="nodeID" />  <!-- Recall: name= sets the post/get array locations. Each index is text (for example password, username)-->
-                        </div>
-  
-                        <div>
-                          <label for="status" class="text_label"> Status:</label>
-                          <input id="status" type="status" class="text_input" name="status"  />
-                        </div>
-                        
-                    </div> <!--class=col-12-->
-                  </div> <!--class=row-->
-                  <div class="row g-0">
-                    <div class="col-12">
-                      <!-- Recall: post or get is an array that can be indexed using text -->
-                        
-                          <div>
-                            <label for="currentFloor" class="text_label"> Current floor:</label>
-                            <input id="currentFloor" type='text' name='currentFloor' class="text_input" />
-                          </div>
                         
                     </div> <!--class=col-12-->
                   </div> <!--class=row-->
@@ -144,10 +124,6 @@
                       <!-- Recall: post or get is an array that can be indexed using text -->
                         
                           
-                          <div>
-                            <label for="requestedFloor:" class="text_label"> Requested floor:</label>
-                            <input id="requestedFloor" type='text' name='requestedFloor' class="text_input" />
-                          </div>
                         
                     </div> <!--class=col-12-->
                   </div> <!--class=row-->
@@ -155,10 +131,16 @@
                     <div class="col-12">
                       <!-- Recall: post or get is an array that can be indexed using text -->
                         
-                          <div>
-                            <label for="new_username" class="text_label"> New Username:</label>
-                            <input id="new_username" type='text' name='new_username' class="text_input" />
-                          </div>
+                          
+                          
+                        
+                    </div> <!--class=col-12-->
+                  </div> <!--class=row-->
+                  <div class="row g-0">
+                    <div class="col-12">
+                      <!-- Recall: post or get is an array that can be indexed using text -->
+                        
+                          
                         
                         
                     </div> <!--class=col-12-->
@@ -167,20 +149,18 @@
                     <div class="col-12">
                       <!-- Recall: post or get is an array that can be indexed using text -->
                         
-                          <div>
-                            <label for="otherInfo" class="text_label"> Other info:</label>
-                            <input id="otherInfo" type='text' name='otherInfo' class="text_input" />
-                          </div>
+                          
                         
                     </div> <!--class=col-12-->
                   </div> <!--class=row-->
                   <div class="row g-0">
                     <div class="col-12">
                      
-                      <input type="submit" value="INSERT" name="insert" />
-                      <input type="submit" value="DELETE" name="delete" />
-                      <input type="submit" value="UPDATE" name="update" />
-                      <input type="submit" value="READ" name="read" />
+                      <input type="submit" value="authorizedUsers" name="t1" />
+                      <input type="submit" value="authorizedUsersAccess" name="t2" />
+                      <input type="submit" value="elevatorNetwork" name="t3" />
+                      <input type="submit" value="dataBaseAccess" name="t4" />
+                      <input type="submit" value="elevatorHistory" name="t5" />
                     </div> <!--class=col-12-->
                   </div> <!--class=row-->
   
@@ -206,7 +186,9 @@
   
           <footer>
            
-           
+          <p>Click <a href='../php/logout.php'>here</a> to sign out</p>
+          <p>Click <a href='../php/members2.php'>here</a> to see authorized users</p>
+          <p>Click <a href='../php/members.php'>here</a> to see elevator network</p>
           </footer>
   
       </div> <!-- id=page-->
